@@ -1,0 +1,131 @@
+[
+  {
+    "name": "Redeem offer",
+    "desc": "This rule checks if loan applicants can redeem offer",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "gte": [
+            {
+              "obj": "transaction.amount",
+              "const": 100
+            }
+          ]
+        },
+        {
+          "eq": [
+            {
+              "obj": "transaction.amount",
+              "const": 150
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "transaction.amount",
+            "const": true
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Redeem offer",
+    "desc": "This rule checks if loan applicants can redeem offer",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "gte": [
+            {
+              "obj": "transaction.transactionAmount",
+              "const": 100
+            }
+          ]
+        },
+        {
+          "eq": [
+            {
+              "obj": "transaction.transactionAmount",
+              "const": 150
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "transaction.amount",
+            "const": true
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Redeem offer",
+    "desc": "This rule checks if loan applicants can redeem offer",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "gte": [
+            {
+              "obj": "transaction.transactionAmount",
+              "const": 100
+            }
+          ]
+        },
+        {
+          "eq": [
+            {
+              "obj": "transaction.transactionAmount",
+              "const": 150
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "transaction.amount",
+            "const": true
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "4"
+          }
+        ]
+      }
+    ]
+  }
+]
