@@ -149,7 +149,7 @@ app.post('/v1/tms/rule/new', async (req, res) => {
 
         arr.push(newRule);
         const msg = JSON.stringify(newRule)
-      //  await produceMessage("rule-topic", msg)
+        await produceMessage("rule-topic", msg)
 
         const data = JSON.stringify(arr, null, 2);
         fs.writeFile("data/rules.json", data, (err) => {
@@ -211,7 +211,6 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
               createdAt: faker.datatype.datetime(),
               
             };
-            // Transaction.push(newTransaction);
           }
           return actor;
         });
@@ -231,11 +230,11 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
               }
           Transaction.push(data);
           const msg = JSON.stringify(data)
-        //  await produceMessage("transaction-topic", msg) 
+         await produceMessage("transaction-topic", msg) 
         } else {
           Transaction.push(newTransaction); 
           const msg = JSON.stringify(newTransaction)
-          // await produceMessage("transaction-topic", msg)        
+          await produceMessage("transaction-topic", msg)        
         }
         
 
@@ -262,7 +261,7 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
 })
 
 app.listen(port, async () => {
-    //await consumeMessage("transaction-topic")
+    await consumeMessage("transaction-topic")
     console.log(`server is up and running on port ${port}`)
 
 })

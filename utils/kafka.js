@@ -2,7 +2,7 @@ const { Kafka } = require('kafkajs')
 
 const kafka = new Kafka({
   clientId: 'node-tms-service',
-  brokers: ['localhost:9092'],
+  brokers: ['localhost:29092'],
 })
 
 const produceMessage = async (topic, message) => {

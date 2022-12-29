@@ -124,7 +124,6 @@ const createFakeTransaction = () => {
         merchantCategoryCode: faker.datatype.number(10000),
         merchantCountryCode: faker.address.countryCode(),
       },
-    dateOfLastActivity: faker.datatype.datetime(),
     createdAt: faker.datatype.datetime(),
   };
 
