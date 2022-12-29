@@ -6,12 +6,14 @@ const createFakeActor = () => {
     _id: faker.database.mongodbObjectId(),
     type: faker.helpers.arrayElement(["individual", "legal_entity"]),
     subType: faker.helpers.arrayElement(["employee", "customer"]),
+    accountNumber: faker.finance.account(10),
     legalEntity: [
       {
         dateOfRegisteration: faker.datatype.datetime(),
         type: faker.helpers.arrayElement(["sole_proprietorship", "patnership"]),
         industry: faker.helpers.arrayElement(["ict", "agriculture", "medical", "finance"]),
         url: faker.helpers.arrayElement(["www.duumyurl.com", "www.newurl.com"]),
+        CountryOfIncorporation: faker.address.country()
       },
     ],
     companyName: faker.company.name(),
@@ -46,6 +48,7 @@ const createFakeActor = () => {
       {
         type: faker.helpers.arrayElement(["drivers_license", "bvn", "nin"]),
         id: faker.database.mongodbObjectId(),
+        issuingAuthority: faker.company.name(),
         expirationDate: faker.datatype.datetime(),
       },
     ],
@@ -74,7 +77,7 @@ const createFakeTransaction = () => {
   const transaction = {
     _id: faker.database.mongodbObjectId(),
     channel: faker.helpers.arrayElement(["branch", "online", "atm", "pos", "mobile", "unknown"]),
-    accountNumber: "96823530",
+    accountNumber: faker.finance.account(10),
     transactionDate: faker.datatype.datetime(),
     transactionAmount: faker.commerce.price(),
     localTransactionAmount: faker.commerce.price(),
@@ -108,13 +111,6 @@ const createFakeTransaction = () => {
     ]),
     merchantCategoryCode: faker.datatype.number(10000),
     merchantCountryCode: faker.address.countryCode(),
-    participant:
-      {
-        id: faker.database.mongodbObjectId(),
-        type: faker.helpers.arrayElement(["actor", "distribution_list", "other"]),
-        role: faker.helpers.arrayElement(["owner", "user"]),
-        name: faker.name.fullName(),
-      },
     transactionBeneficiary:
       {
         id: faker.database.mongodbObjectId(),

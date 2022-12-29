@@ -1,38 +1,52 @@
 const arrangeRuleObject = (data) => {
   const orderWhenObject = () => {
     const arr = [];
-    for (let i = 0; i < data.when.sentence.length; i += 1) {
-      arr.push({
-        [`${data.when.sentence[`${i}`].operator}`]: [
-          {
-            obj: `${data.header}.${data.when.sentence[i].modelField}`,
-            const: data.when.sentence[i].const,
-          },
-        ],
-      });
-    }
+    data.groups.map((group)=> {
+      for (let i = 0; i < group.sentences.length; i += 1) {
+        let firstObject;
+        let secondObject;
+        if (group.sentences[i].action === null || group.sentences[i].action === undefined) {
+          firstObject = { obj: `${data.header}.${group.sentences[i].inputField}`}
+        } else {
+          firstObject = { call: ["CF.Aggregation", {
+            const: `{'action': ${group.sentences[i].action} , 'filter_fields': ${JSON.stringify(group.sentences[i].filterFields).replace(/\"/g, "'")}, 'action_field': ${group.sentences[i].actionField}, 'date_range': ${group.sentences[i].dateRange}})`
+          }]}
+        }
+        if (group.sentences[i].type === "static"){
+          secondObject = { const: group.sentences[i].compareTo}
+        } else{
+          secondObject = {obj: `${data.header}.${group.sentences[i].compareTo}`}
+        }
+        arr.push({
+          [`${group.sentences[`${i}`].operation}`]: [
+            
+             firstObject,
+             secondObject,
+          ],
+        });
+      }
+    })
+    
     return arr;
   };
   const orderThenArray = () => {
     const arr = [];
-    for (let i = 0; i < data.then.set.length; i += 1) {
       arr.push({
-        set: [{ obj: `${data.header}.${data.then.set[i].obj}`, const: data.then.set[i].const }],
+        set: [{ obj: `${data.header}.Tag`},
+        { const: data.tag }],
+      },
+      {
+        call: [`Retract`, { const: data.name }]
       });
-    }
-
-    for (let i = 0; i < data.then.call.length; i += 1) {
-      arr.push({ call: [`${data.then.call[i].action}`, { const: data.then.call[i].const }] });
-    }
 
     return arr;
   };
   const rule = {
     name: data.name,
     desc: data.desc,
-    salience: data.salience,
+    salience: data.priority,
     when: {
-      [data.when.operator]: orderWhenObject(),
+      [data.groupOperator]: orderWhenObject(),
     },
     then: orderThenArray(),
   };

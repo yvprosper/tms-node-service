@@ -1,7 +1,4 @@
 const arithmeticOperators = [
-  "and",
-  "or",
-  "not",
   "eq",
   "gt",
   "gte",
@@ -20,4 +17,9 @@ const arithmeticOperators = [
   "const",
 ];
 
-module.exports = arithmeticOperators;
+const logicalOperators = ["and", "not", "or"]
+
+module.exports = {
+  arithmeticOperators,
+  logicalOperators
+};

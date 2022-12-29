@@ -1,6 +1,9 @@
 const fs = require('fs')
-const arithmeticOperators = require('../data/data')
+const {arithmeticOperators, logicalOperators} = require('../data/data')
 const Joi = require('joi')
+const data = fs.readFileSync("data/transactions.json", "utf-8");
+const doc = JSON.parse(data);
+const Transactions = Array.from(doc);
 
 
 
@@ -38,12 +41,6 @@ const createTransactionSchema = async  (payload) => {
     "reversal",
     )
     .required(),
-  participant: Joi.object().keys({
-    id: Joi.string().required(),
-    type: Joi.string().valid("actor", "distribution_list", "other").required(),
-    role: Joi.string().valid("owner", "user").required(),
-    name: Joi.string().required(),
-  }),
   transactionBeneficiary: Joi.object().keys({
     id: Joi.string().required(),
     type: Joi.string().valid("individual", "legal entity"),
@@ -60,34 +57,34 @@ const createTransactionSchema = async  (payload) => {
   return schema.validate(payload);
 };
 
-
 // validation for creating a rule
 const createRuleSchema = async  (payload) => {
   const schema = Joi.object({
   header: Joi.string().required(),
   name: Joi.string().required(),
   desc: Joi.string().required(),
-  salience: Joi.number().required(),
-  when: Joi.object()
-    .custom((value, helper) => {
-      const data = fs.readFileSync("data/transactions.json", "utf-8");
-      const doc = JSON.parse(data);
-      const transactions = Array.from(doc);
-      const dataset = value.sentence;
-      const { operator } = value;
-      if (arithmeticOperators.indexOf(operator) === -1) return helper.message("invalid operator");
-      for (let i = 0; i < dataset.length; i += 1) {
-        if (!transactions[0][`${dataset[i].modelField}`]) return helper.message("unknown dataset");
-        if (arithmeticOperators.indexOf(dataset[i].operator) === -1)
-          return helper.message("invalid operator in sentence");
-        const senConst = Object.keys(dataset[i]);
-        if (senConst[2] !== "const" && typeof dataset[i].const !== "number")
-          return helper.message("const must be of type number");
-      }
-      return value;
+  priority: Joi.number().required(),
+  groupOperator: Joi.string().valid(...logicalOperators).required(),
+  score: Joi.number().required(),
+  tag: Joi.string().required(),
+  groups: Joi.array().items({
+      operator: Joi.string().valid(...logicalOperators) ,
+      sentences: Joi.array().items({
+        type: Joi.string().valid("static", "dynamic"),
+        inputField: Joi.string().custom((value, helper)=>{
+          if (!Transactions[0][`${value}`]) throw new Error("input field does not match dataset");
+          return value;
+        }),
+        operation: Joi.string().valid(...arithmeticOperators),
+        action: Joi.string(),
+        actionField: Joi.string(),
+        filterFields: Joi.array(),
+        dateRange: Joi.array(),
+        compareTo: Joi.string(),
+        includeCurrent: Joi.boolean()
+
+      })
     })
-    .required(),
-  then: Joi.object().required(),
   }).unknown();
   return schema.validate(payload);
 };

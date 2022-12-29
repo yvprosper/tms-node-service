@@ -1,23 +1,32 @@
 [
   {
-    "name": "Redeem offer",
-    "desc": "This rule checks if loan applicants can redeem offer",
+    "name": "test 100",
+    "desc": "this rule checks",
     "salience": 7,
     "when": {
       "and": [
         {
-          "gte": [
+          "eq": [
             {
-              "obj": "transaction.amount",
-              "const": 100
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action':'sum','filter_fields':'[object Object]','action_field':'Salary','date_range':'2022-12-10,2022-12-14'}"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
             }
           ]
         },
         {
           "eq": [
             {
-              "obj": "transaction.amount",
-              "const": 150
+              "obj": "Transaction.transactionAmount"
+            },
+            {
+              "const": true
             }
           ]
         }
@@ -27,8 +36,10 @@
       {
         "set": [
           {
-            "obj": "transaction.amount",
-            "const": true
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
           }
         ]
       },
@@ -36,31 +47,30 @@
         "call": [
           "Retract",
           {
-            "const": "4"
+            "const": "test 100"
           }
         ]
       }
     ]
   },
   {
-    "name": "Redeem offer",
-    "desc": "This rule checks if loan applicants can redeem offer",
+    "name": "test 100",
+    "desc": "this rule checks",
     "salience": 7,
     "when": {
       "and": [
         {
-          "gte": [
-            {
-              "obj": "transaction.transactionAmount",
-              "const": 100
-            }
-          ]
-        },
-        {
           "eq": [
             {
-              "obj": "transaction.transactionAmount",
-              "const": 150
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action':'sum','filter_fields':'[object Object]','action_field':'Salary','date_range':'2022-12-10,2022-12-14'}"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
             }
           ]
         }
@@ -70,8 +80,10 @@
       {
         "set": [
           {
-            "obj": "transaction.amount",
-            "const": true
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
           }
         ]
       },
@@ -79,31 +91,30 @@
         "call": [
           "Retract",
           {
-            "const": "4"
+            "const": "test 100"
           }
         ]
       }
     ]
   },
   {
-    "name": "Redeem offer",
-    "desc": "This rule checks if loan applicants can redeem offer",
+    "name": "test 100",
+    "desc": "this rule checks",
     "salience": 7,
     "when": {
       "and": [
         {
-          "gte": [
-            {
-              "obj": "transaction.transactionAmount",
-              "const": 100
-            }
-          ]
-        },
-        {
           "eq": [
             {
-              "obj": "transaction.transactionAmount",
-              "const": 150
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action':'sum','filter_fields':'[object Object]','action_field':'Salary','date_range':'2022-12-10,2022-12-14'}"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
             }
           ]
         }
@@ -113,8 +124,10 @@
       {
         "set": [
           {
-            "obj": "transaction.amount",
-            "const": true
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
           }
         ]
       },
@@ -122,7 +135,741 @@
         "call": [
           "Retract",
           {
-            "const": "4"
+            "const": "test 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test 100",
+    "desc": "this rule checks",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action':'sum','filter_fields':'[object Object]','action_field':'Salary','date_range':'2022-12-10,2022-12-14'}"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "test 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test 100",
+    "desc": "this rule checks",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action':'sum','filter_fields':'[{\\'name\\':[\\'john\\',\\'tina\\']}]','action_field':'Salary','date_range':'2022-12-10,2022-12-14'}"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "test 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test 100",
+    "desc": "this rule checks",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "\"{'action': sum , 'filter_fields': [{\"name\":[\"john\",\"tina\"]}], 'action_field': Salary, 'date_range': 2022-12-10,2022-12-14})\""
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "test 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test 100",
+    "desc": "this rule checks",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "\"{'action': sum , 'filter_fields': [object Object], 'action_field': Salary, 'date_range': 2022-12-10,2022-12-14})\""
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "test 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test 100",
+    "desc": "this rule checks",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action': sum , 'filter_fields': [object Object], 'action_field': Salary, 'date_range': 2022-12-10,2022-12-14})"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "test 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test 100",
+    "desc": "this rule checks",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action': sum , 'filter_fields': [{\"name\":[\"john\",\"tina\"]}], 'action_field': Salary, 'date_range': 2022-12-10,2022-12-14})"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "test 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test 100",
+    "desc": "this rule checks",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action': sum , 'filter_fields': [{\"name\":[\"john\",\"tina\"]}], 'action_field': Salary, 'date_range': 2022-12-10,2022-12-14})"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "test 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test 100",
+    "desc": "this rule checks",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action': sum , 'filter_fields': [{'name':['john','tina']}], 'action_field': Salary, 'date_range': 2022-12-10,2022-12-14})"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "test 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test 100",
+    "desc": "this rule checks",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action': sum , 'filter_fields': [{'name':['john','tina']}], 'action_field': Salary, 'date_range': 2022-12-10,2022-12-14})"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "test 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test 100",
+    "desc": "this rule checks",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action': sum , 'filter_fields': [{'name':['john','tina']}], 'action_field': Salary, 'date_range': 2022-12-10,2022-12-14})"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "test 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test 100",
+    "desc": "this rule checks",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action': sum , 'filter_fields': [{'name':['john','tina']}], 'action_field': Salary, 'date_range': 2022-12-10,2022-12-14})"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "test 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test 100",
+    "desc": "this rule checks",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action': sum , 'filter_fields': [{'name':['john','tina']}], 'action_field': Salary, 'date_range': 2022-12-10,2022-12-14})"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "test 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test 100",
+    "desc": "this rule checks",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action': sum , 'filter_fields': [{'name':['john','tina']}], 'action_field': Salary, 'date_range': 2022-12-10,2022-12-14})"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "test 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test 100",
+    "desc": "this rule checks",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action': sum , 'filter_fields': [{'name':['john','tina']}], 'action_field': Salary, 'date_range': 2022-12-10,2022-12-14})"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "test 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test 100",
+    "desc": "this rule checks",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action': sum , 'filter_fields': [{'name':['john','tina']}], 'action_field': Salary, 'date_range': 2022-12-10,2022-12-14})"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        },
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action': sum , 'filter_fields': [{'name':['john','tina']}], 'action_field': Salary, 'date_range': 2022-12-10,2022-12-14})"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "test 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "test 100",
+    "desc": "this rule checks",
+    "salience": 7,
+    "when": {
+      "and": [
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action': sum , 'filter_fields': [{'name':['john','tina']}], 'action_field': Salary, 'date_range': 2022-12-10,2022-12-14})"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        },
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action': sum , 'filter_fields': [{'name':['john','tina']}], 'action_field': Salary, 'date_range': 2022-12-10,2022-12-14})"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "test 100"
           }
         ]
       }
