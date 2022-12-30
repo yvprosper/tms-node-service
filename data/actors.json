@@ -1,1637 +1,562 @@
 [
   {
-    "_id": "d2279d09dfea70ae52b57b7a",
-    "type": "legal_entity",
-    "accountNumber": "3612356468",
-    "legalEntity": [
+    "Id": "f364ffcf2cbe3f573ffb8ee2",
+    "Type": "individual",
+    "AccountNumber": "2012984520",
+    "FirstName": "Eden",
+    "LastName": "Mraz",
+    "DisplayName": "Angel West",
+    "Status": "active",
+    "Monitored": "yes",
+    "Gender": "male",
+    "PhoneNumber": [
       {
-        "dateOfRegisteration": "2068-05-25T23:06:14.118Z",
-        "type": "sole_proprietorship",
-        "industry": "finance",
-        "url": "www.duumyurl.com",
-        "CountryOfIncorporation": "Republic of Korea"
+        "Type": "home",
+        "Number": "(506) 789-9989 x1830"
       }
     ],
-    "companyName": "Shields and Sons",
-    "displayName": "Gail Jakubowski",
-    "status": "terminated",
-    "monitored": "yes",
-    "phoneNumber": [
+    "Email": [
       {
-        "type": "office",
-        "number": "(869) 365-2153"
+        "Type": "home",
+        "Address": "Dameon.Barton@hotmail.com"
       }
     ],
-    "email": [
+    "DateOfBirth": "2004-04-08T08:40:13.690Z",
+    "Address": [
       {
-        "type": "office",
-        "address": "Buck_Mante56@gmail.com"
+        "AddressType": "home",
+        "Line1": "31815 Jordyn Camp",
+        "Line2": "Apt. 197",
+        "PostCode": "84849-6131",
+        "City": "Hesperia",
+        "State": "Delaware",
+        "Country": "Kyrgyz Republic"
       }
     ],
-    "address": [
+    "GovernmentId": [
       {
-        "type": "office",
-        "city": "Fort Worth",
-        "state": "Oregon",
-        "country": "Congo"
+        "Type": "bvn",
+        "Id": "6a838f37c32a88fccee8e4f2",
+        "IssuingAuthority": "Beatty, Moen and Durgan",
+        "ExpirationDate": "1995-01-11T04:16:31.873Z"
       }
     ],
-    "governmentId": [
+    "SocialAccounts": [
       {
-        "type": "nin",
-        "id": "cc4ee9a30bbc40ccff6ddcf9",
-        "issuingAuthority": "Koss - Bayer",
-        "expirationDate": "2015-03-12T20:38:24.320Z"
+        "Type": "instagram",
+        "Account": "Lawson_tms"
       }
     ],
-    "socialAccounts": [
-      {
-        "type": "facebook",
-        "account": "Eloisa_tms"
-      }
-    ],
-    "countryCode": "VU",
-    "domicile": "AM",
-    "validationStatus": "validated",
-    "createdAt": "2061-02-06T11:58:57.953Z"
+    "CountryCode": "AF",
+    "Domicile": "KW",
+    "ValidationStatus": "validated",
+    "CreatedAt": "2072-02-27T08:49:23.956Z"
   },
   {
-    "_id": "a6cccac71ae782ea2a5b509a",
-    "type": "legal_entity",
-    "accountNumber": "2083298001",
-    "legalEntity": [
+    "Id": "a73b80639afcb8b4cf9d99c9",
+    "Type": "individual",
+    "AccountNumber": "9756864013",
+    "FirstName": "Jennifer",
+    "LastName": "Effertz",
+    "DisplayName": "Minnie VonRueden",
+    "Status": "active",
+    "Monitored": "yes",
+    "Gender": "female",
+    "PhoneNumber": [
       {
-        "dateOfRegisteration": "1994-05-25T04:17:06.996Z",
-        "type": "sole_proprietorship",
-        "industry": "agriculture",
-        "url": "www.duumyurl.com",
-        "CountryOfIncorporation": "Cote d'Ivoire"
+        "Type": "office",
+        "Number": "1-704-868-7591 x4995"
       }
     ],
-    "companyName": "Nitzsche Inc",
-    "displayName": "Maureen Marvin Sr.",
-    "status": "terminated",
-    "monitored": "no",
-    "phoneNumber": [
+    "Email": [
       {
-        "type": "home",
-        "number": "1-244-448-2818 x6670"
+        "Type": "home",
+        "Address": "Katharina.Runolfsdottir66@gmail.com"
       }
     ],
-    "email": [
+    "DateOfBirth": "1968-06-06T20:09:14.652Z",
+    "Address": [
       {
-        "type": "office",
-        "address": "Polly2@hotmail.com"
+        "AddressType": "office",
+        "Line1": "9707 Haylee Via",
+        "Line2": "Suite 477",
+        "PostCode": "43172-9699",
+        "City": "Filomenahaven",
+        "State": "Virginia",
+        "Country": "Kuwait"
       }
     ],
-    "address": [
+    "GovernmentId": [
       {
-        "type": "office",
-        "city": "Glendale",
-        "state": "Texas",
-        "country": "Pitcairn Islands"
+        "Type": "nin",
+        "Id": "0f7fd9f3ee89844e3805bada",
+        "IssuingAuthority": "Block - Dickinson",
+        "ExpirationDate": "2015-11-20T23:20:13.796Z"
       }
     ],
-    "governmentId": [
+    "SocialAccounts": [
       {
-        "type": "drivers_license",
-        "id": "e4faa16d2fc5cdfd1fa43aae",
-        "issuingAuthority": "Batz Group",
-        "expirationDate": "2089-12-15T08:51:36.855Z"
+        "Type": "instagram",
+        "Account": "Lauriane_tms"
       }
     ],
-    "socialAccounts": [
-      {
-        "type": "instagram",
-        "account": "Roselyn_tms"
-      }
-    ],
-    "countryCode": "TW",
-    "domicile": "SA",
-    "validationStatus": "manual_entry",
-    "createdAt": "2095-07-25T12:50:01.907Z"
+    "CountryCode": "UY",
+    "Domicile": "MF",
+    "ValidationStatus": "validated",
+    "CreatedAt": "1993-11-26T12:09:32.253Z"
   },
   {
-    "_id": "12f7cd1a91105fbce7a1a2d2",
-    "type": "legal_entity",
-    "accountNumber": "5131959469",
-    "legalEntity": [
+    "Id": "d65c9fcfdd6dc68044b6244f",
+    "Type": "individual",
+    "AccountNumber": "4058878325",
+    "FirstName": "Avery",
+    "LastName": "Lang",
+    "DisplayName": "Valerie Kozey",
+    "Status": "active",
+    "Monitored": "no",
+    "Gender": "male",
+    "PhoneNumber": [
       {
-        "dateOfRegisteration": "2017-09-15T19:13:10.726Z",
-        "type": "patnership",
-        "industry": "finance",
-        "url": "www.duumyurl.com",
-        "CountryOfIncorporation": "Myanmar"
+        "Type": "home",
+        "Number": "948-371-9923 x05803"
       }
     ],
-    "companyName": "Rempel, Stokes and Powlowski",
-    "displayName": "Orville Kuhn",
-    "status": "terminated",
-    "monitored": "no",
-    "phoneNumber": [
+    "Email": [
       {
-        "type": "home",
-        "number": "1-367-932-6529 x80401"
+        "Type": "office",
+        "Address": "Jon.Halvorson69@yahoo.com"
       }
     ],
-    "email": [
+    "DateOfBirth": "1958-01-04T13:00:50.768Z",
+    "Address": [
       {
-        "type": "office",
-        "address": "Marquise_Altenwerth22@hotmail.com"
+        "AddressType": "home",
+        "Line1": "756 Hahn Pass",
+        "Line2": "Suite 681",
+        "PostCode": "11684",
+        "City": "Haleyburgh",
+        "State": "Kentucky",
+        "Country": "Saint Helena"
       }
     ],
-    "address": [
+    "GovernmentId": [
       {
-        "type": "office",
-        "city": "South Brycen",
-        "state": "Arizona",
-        "country": "Benin"
+        "Type": "nin",
+        "Id": "decbefc6075bc70e0c2acb65",
+        "IssuingAuthority": "DuBuque - Hamill",
+        "ExpirationDate": "2013-05-22T22:54:22.079Z"
       }
     ],
-    "governmentId": [
+    "SocialAccounts": [
       {
-        "type": "nin",
-        "id": "aaabb3738a1bb6ffcb48c302",
-        "issuingAuthority": "Littel and Sons",
-        "expirationDate": "2031-09-28T16:19:26.730Z"
+        "Type": "facebook",
+        "Account": "Lauriane_tms"
       }
     ],
-    "socialAccounts": [
-      {
-        "type": "instagram",
-        "account": "Verner_tms"
-      }
-    ],
-    "countryCode": "DJ",
-    "domicile": "ID",
-    "validationStatus": "validated",
-    "createdAt": "2055-08-06T09:46:35.754Z"
+    "CountryCode": "TN",
+    "Domicile": "MU",
+    "ValidationStatus": "due_deligence",
+    "CreatedAt": "2052-09-15T07:33:40.044Z"
   },
   {
-    "_id": "fa9f60adc8eac277dd1c25f5",
-    "type": "legal_entity",
-    "accountNumber": "1647360487",
-    "legalEntity": [
+    "Id": "5ff314d3a38ec554f75d1c9b",
+    "Type": "individual",
+    "AccountNumber": "2341050730",
+    "FirstName": "Freda",
+    "LastName": "Hintz",
+    "DisplayName": "Carla Lemke",
+    "Status": "active",
+    "Monitored": "no",
+    "Gender": "male",
+    "PhoneNumber": [
       {
-        "dateOfRegisteration": "2044-06-16T05:00:21.157Z",
-        "type": "sole_proprietorship",
-        "industry": "medical",
-        "url": "www.newurl.com",
-        "CountryOfIncorporation": "Lebanon"
+        "Type": "office",
+        "Number": "309-816-8467 x59837"
       }
     ],
-    "companyName": "Bashirian LLC",
-    "displayName": "Violet Wilderman",
-    "status": "terminated",
-    "monitored": "no",
-    "phoneNumber": [
+    "Email": [
       {
-        "type": "office",
-        "number": "871-795-3530"
+        "Type": "home",
+        "Address": "Curtis51@hotmail.com"
       }
     ],
-    "email": [
+    "DateOfBirth": "1984-08-22T00:27:34.505Z",
+    "Address": [
       {
-        "type": "home",
-        "address": "Joesph82@yahoo.com"
+        "AddressType": "home",
+        "Line1": "3791 Rowland Ports",
+        "Line2": "Apt. 920",
+        "PostCode": "10487",
+        "City": "Reichelburgh",
+        "State": "West Virginia",
+        "Country": "Cyprus"
       }
     ],
-    "address": [
+    "GovernmentId": [
       {
-        "type": "office",
-        "city": "Wittingchester",
-        "state": "Iowa",
-        "country": "Panama"
+        "Type": "nin",
+        "Id": "1f16edceef5cbd82aa6659cc",
+        "IssuingAuthority": "Quigley - Terry",
+        "ExpirationDate": "2083-02-15T10:41:59.729Z"
       }
     ],
-    "governmentId": [
+    "SocialAccounts": [
       {
-        "type": "nin",
-        "id": "d1eaf60cb7eb3287c30caef3",
-        "issuingAuthority": "Fahey, Bauch and Schmitt",
-        "expirationDate": "2068-04-20T21:50:07.713Z"
+        "Type": "facebook",
+        "Account": "Audra_tms"
       }
     ],
-    "socialAccounts": [
-      {
-        "type": "facebook",
-        "account": "Jevon_tms"
-      }
-    ],
-    "countryCode": "VA",
-    "domicile": "IT",
-    "validationStatus": "due_deligence",
-    "createdAt": "2041-08-20T17:43:57.176Z"
+    "CountryCode": "KE",
+    "Domicile": "AE",
+    "ValidationStatus": "manual_entry",
+    "CreatedAt": "2046-12-01T13:41:29.653Z"
   },
   {
-    "_id": "f7fa6bd9d35eeed615ccbe63",
-    "type": "individual",
-    "subType": "employee",
-    "accountNumber": "5435970229",
-    "firstName": "Mohammed",
-    "lastName": "Spencer",
-    "displayName": "Nelson Block",
-    "status": "terminated",
-    "monitored": "yes",
-    "gender": "male",
-    "phoneNumber": [
+    "Id": "c394bffbf211eaf5af5ec586",
+    "Type": "legal_entity",
+    "AccountNumber": "0822381386",
+    "LegalEntity": [
       {
-        "type": "office",
-        "number": "1-986-419-2721"
+        "DateOfRegisteration": "2026-01-31T05:26:16.972Z",
+        "Type": "sole_proprietorship",
+        "IndustryClassification": "agriculture",
+        "Url": "www.duumyurl.com",
+        "CountryOfIncorporation": "United Arab Emirates"
       }
     ],
-    "email": [
+    "CompanyName": "O'Connell - Schimmel",
+    "FirstName": "Pablo",
+    "LastName": "Hermiston",
+    "DisplayName": "Lee Rohan",
+    "Status": "terminated",
+    "Monitored": "yes",
+    "Gender": "female",
+    "PhoneNumber": [
       {
-        "type": "home",
-        "address": "Consuelo.Huels@yahoo.com"
+        "Type": "office",
+        "Number": "278-516-6877 x96639"
       }
     ],
-    "dateOfBirth": "1963-02-14T07:33:13.659Z",
-    "address": [
+    "Email": [
       {
-        "type": "home",
-        "city": "North Carli",
-        "state": "Nevada",
-        "country": "United States of America"
+        "Type": "office",
+        "Address": "Jeremie.Legros@yahoo.com"
       }
     ],
-    "governmentId": [
+    "DateOfBirth": "2003-05-04T22:10:57.272Z",
+    "Address": [
       {
-        "type": "nin",
-        "id": "8fdaaacb694bcee38fe7bce2",
-        "issuingAuthority": "Herman, Prohaska and Simonis",
-        "expirationDate": "2063-01-10T06:59:20.788Z"
+        "AddressType": "office",
+        "Line1": "1945 Leland Plain",
+        "Line2": "Apt. 311",
+        "PostCode": "94154-1702",
+        "City": "Denver",
+        "State": "Colorado",
+        "Country": "Mexico"
       }
     ],
-    "socialAccounts": [
+    "GovernmentId": [
       {
-        "type": "facebook",
-        "account": "Yvonne_tms"
+        "Type": "nin",
+        "Id": "b7d704ca2ebbdd9c8473bf55",
+        "IssuingAuthority": "Schiller and Sons",
+        "ExpirationDate": "2000-08-16T22:17:49.544Z"
       }
     ],
-    "countryCode": "CN",
-    "domicile": "MO",
-    "validationStatus": "vendor_suplied_data",
-    "createdAt": "2044-10-26T19:19:31.971Z"
+    "SocialAccounts": [
+      {
+        "Type": "twitter",
+        "Account": "Leonor_tms"
+      }
+    ],
+    "CountryCode": "BI",
+    "Domicile": "PT",
+    "ValidationStatus": "unvalidated",
+    "CreatedAt": "2078-02-20T19:06:37.183Z"
   },
   {
-    "_id": "fe563bb48579e4ba7bd844aa",
-    "type": "individual",
-    "subType": "customer",
-    "accountNumber": "2319991924",
-    "firstName": "Clotilde",
-    "lastName": "Fisher",
-    "displayName": "Miss Al Russel",
-    "status": "terminated",
-    "monitored": "yes",
-    "gender": "female",
-    "phoneNumber": [
+    "Id": "edededfc28752fffdafa0a08",
+    "Type": "legal_entity",
+    "AccountNumber": "9385407647",
+    "LegalEntity": [
       {
-        "type": "home",
-        "number": "(865) 744-2457 x6932"
+        "DateOfRegisteration": "2048-12-04T13:39:09.581Z",
+        "Type": "sole_proprietorship",
+        "IndustryClassification": "medical",
+        "Url": "www.duumyurl.com",
+        "CountryOfIncorporation": "South Africa"
       }
     ],
-    "email": [
+    "CompanyName": "Hintz Inc",
+    "FirstName": "Greg",
+    "LastName": "Lockman",
+    "DisplayName": "Julian Jaskolski",
+    "Status": "active",
+    "Monitored": "yes",
+    "Gender": "female",
+    "PhoneNumber": [
       {
-        "type": "home",
-        "address": "Martin.MacGyver@gmail.com"
+        "Type": "office",
+        "Number": "(910) 626-5430 x110"
       }
     ],
-    "dateOfBirth": "1999-11-28T22:16:54.173Z",
-    "address": [
+    "Email": [
       {
-        "type": "office",
-        "city": "East Roxaneburgh",
-        "state": "Maryland",
-        "country": "Svalbard & Jan Mayen Islands"
+        "Type": "office",
+        "Address": "Eloise.Lebsack51@yahoo.com"
       }
     ],
-    "governmentId": [
+    "DateOfBirth": "1961-02-26T08:38:00.172Z",
+    "Address": [
       {
-        "type": "bvn",
-        "id": "bff46f99bbc07fe20dc37b3a",
-        "issuingAuthority": "Moen - Mayer",
-        "expirationDate": "1992-05-28T08:39:26.575Z"
+        "AddressType": "home",
+        "Line1": "8064 Davis Burg",
+        "Line2": "Apt. 189",
+        "PostCode": "01951",
+        "City": "Olathe",
+        "State": "Tennessee",
+        "Country": "Eritrea"
       }
     ],
-    "socialAccounts": [
+    "GovernmentId": [
       {
-        "type": "facebook",
-        "account": "Joana_tms"
+        "Type": "drivers_license",
+        "Id": "bce5d860b8f742b44f629bbf",
+        "IssuingAuthority": "Gorczany Inc",
+        "ExpirationDate": "2050-08-26T14:41:42.772Z"
       }
     ],
-    "countryCode": "LV",
-    "domicile": "SL",
-    "validationStatus": "due_deligence",
-    "createdAt": "2044-07-15T14:30:41.980Z"
+    "SocialAccounts": [
+      {
+        "Type": "facebook",
+        "Account": "Everette_tms"
+      }
+    ],
+    "CountryCode": "DO",
+    "Domicile": "GB",
+    "ValidationStatus": "manual_entry",
+    "CreatedAt": "2058-04-15T02:52:02.380Z"
   },
   {
-    "_id": "007a3faf9bd180df36fda27a",
-    "type": "legal_entity",
-    "accountNumber": "2261984155",
-    "legalEntity": [
+    "Id": "0a2484618c851e28a809eae1",
+    "Type": "individual",
+    "AccountNumber": "7206151916",
+    "FirstName": "Felicity",
+    "LastName": "Fritsch",
+    "DisplayName": "Mathew Cruickshank Jr.",
+    "Status": "active",
+    "Monitored": "yes",
+    "Gender": "male",
+    "PhoneNumber": [
       {
-        "dateOfRegisteration": "2024-08-19T20:21:03.015Z",
-        "type": "sole_proprietorship",
-        "industry": "finance",
-        "url": "www.newurl.com",
-        "CountryOfIncorporation": "Madagascar"
+        "Type": "office",
+        "Number": "1-513-751-7434"
       }
     ],
-    "companyName": "Crona - Beer",
-    "displayName": "Ms. John Leffler III",
-    "status": "terminated",
-    "monitored": "no",
-    "phoneNumber": [
+    "Email": [
       {
-        "type": "home",
-        "number": "610.881.7000"
+        "Type": "office",
+        "Address": "Mallie.Toy66@hotmail.com"
       }
     ],
-    "email": [
+    "DateOfBirth": "1986-04-22T19:09:03.081Z",
+    "Address": [
       {
-        "type": "office",
-        "address": "Blair31@hotmail.com"
+        "AddressType": "home",
+        "Line1": "959 Gorczany Junctions",
+        "Line2": "Suite 877",
+        "PostCode": "96001-3552",
+        "City": "West Brandynhaven",
+        "State": "Nebraska",
+        "Country": "Lao People's Democratic Republic"
       }
     ],
-    "address": [
+    "GovernmentId": [
       {
-        "type": "home",
-        "city": "Lake Elvera",
-        "state": "Pennsylvania",
-        "country": "Philippines"
+        "Type": "nin",
+        "Id": "085e465c833ae901a9f6daaf",
+        "IssuingAuthority": "Mann LLC",
+        "ExpirationDate": "2072-08-12T14:24:55.031Z"
       }
     ],
-    "governmentId": [
+    "SocialAccounts": [
       {
-        "type": "nin",
-        "id": "1218f22a6f8ad4c28fababbe",
-        "issuingAuthority": "Ruecker - Parker",
-        "expirationDate": "2060-07-25T23:58:48.105Z"
+        "Type": "instagram",
+        "Account": "Marlin_tms"
       }
     ],
-    "socialAccounts": [
-      {
-        "type": "instagram",
-        "account": "Ali_tms"
-      }
-    ],
-    "countryCode": "SI",
-    "domicile": "NF",
-    "validationStatus": "due_deligence",
-    "createdAt": "2045-03-14T02:54:38.615Z"
+    "CountryCode": "BF",
+    "Domicile": "MR",
+    "ValidationStatus": "manual_entry",
+    "CreatedAt": "1998-03-12T05:35:59.237Z"
   },
   {
-    "_id": "6e3d5e32c87b1a2babebeea9",
-    "type": "legal_entity",
-    "accountNumber": "0115267871",
-    "legalEntity": [
+    "Id": "dd8b3ffc6ce76fe3fabcaddc",
+    "Type": "individual",
+    "AccountNumber": "6031288650",
+    "FirstName": "Ariel",
+    "LastName": "Hegmann",
+    "DisplayName": "Mrs. Jeanne Feeney",
+    "Status": "active",
+    "Monitored": "no",
+    "Gender": "female",
+    "PhoneNumber": [
       {
-        "dateOfRegisteration": "2012-01-10T21:47:35.819Z",
-        "type": "patnership",
-        "industry": "agriculture",
-        "url": "www.duumyurl.com",
-        "CountryOfIncorporation": "Algeria"
+        "Type": "office",
+        "Number": "1-704-412-1686 x476"
       }
     ],
-    "companyName": "Kirlin LLC",
-    "displayName": "Dr. Joanna Feil",
-    "status": "terminated",
-    "monitored": "yes",
-    "phoneNumber": [
+    "Email": [
       {
-        "type": "office",
-        "number": "1-882-394-6698 x080"
+        "Type": "office",
+        "Address": "Ruthe92@gmail.com"
       }
     ],
-    "email": [
+    "DateOfBirth": "1958-01-19T22:30:23.305Z",
+    "Address": [
       {
-        "type": "home",
-        "address": "Trycia.Klocko@hotmail.com"
+        "AddressType": "office",
+        "Line1": "2554 Brandy Trail",
+        "Line2": "Apt. 450",
+        "PostCode": "25390-1009",
+        "City": "Goldnershire",
+        "State": "Kansas",
+        "Country": "Saudi Arabia"
       }
     ],
-    "address": [
+    "GovernmentId": [
       {
-        "type": "office",
-        "city": "Billings",
-        "state": "Washington",
-        "country": "Saint Lucia"
+        "Type": "bvn",
+        "Id": "dc3c5e1c6091c09a3a93278d",
+        "IssuingAuthority": "Durgan - Lesch",
+        "ExpirationDate": "2099-09-08T17:37:41.419Z"
       }
     ],
-    "governmentId": [
+    "SocialAccounts": [
       {
-        "type": "nin",
-        "id": "a5a1d2aff9b6bdbd59c4dca7",
-        "issuingAuthority": "Cruickshank - Romaguera",
-        "expirationDate": "2039-05-27T00:54:05.629Z"
+        "Type": "twitter",
+        "Account": "Mazie_tms"
       }
     ],
-    "socialAccounts": [
-      {
-        "type": "twitter",
-        "account": "Helga_tms"
-      }
-    ],
-    "countryCode": "SL",
-    "domicile": "DJ",
-    "validationStatus": "due_deligence",
-    "createdAt": "2070-03-04T00:57:25.430Z"
+    "CountryCode": "SS",
+    "Domicile": "SL",
+    "ValidationStatus": "vendor_suplied_data",
+    "CreatedAt": "2042-06-14T09:09:59.284Z"
   },
   {
-    "_id": "df7c1aa0ddaeef4cdaa1c4d3",
-    "type": "legal_entity",
-    "accountNumber": "5454186902",
-    "legalEntity": [
+    "Id": "8cdff21652680db6fc1b3edd",
+    "Type": "individual",
+    "AccountNumber": "9702001643",
+    "FirstName": "Nina",
+    "LastName": "Farrell",
+    "DisplayName": "Malcolm Ernser",
+    "Status": "active",
+    "Monitored": "no",
+    "Gender": "male",
+    "PhoneNumber": [
       {
-        "dateOfRegisteration": "2070-01-05T00:31:21.033Z",
-        "type": "sole_proprietorship",
-        "industry": "finance",
-        "url": "www.duumyurl.com",
-        "CountryOfIncorporation": "Slovakia (Slovak Republic)"
+        "Type": "home",
+        "Number": "1-839-251-3446 x57207"
       }
     ],
-    "companyName": "Cummings, Stehr and Klein",
-    "displayName": "Linda Larson",
-    "status": "active",
-    "monitored": "no",
-    "phoneNumber": [
+    "Email": [
       {
-        "type": "home",
-        "number": "(448) 497-8917"
+        "Type": "home",
+        "Address": "Martina_Beier19@hotmail.com"
       }
     ],
-    "email": [
+    "DateOfBirth": "1979-05-09T20:56:53.562Z",
+    "Address": [
       {
-        "type": "home",
-        "address": "Alisa.Homenick31@gmail.com"
+        "AddressType": "home",
+        "Line1": "69869 Keegan Stravenue",
+        "Line2": "Suite 890",
+        "PostCode": "65390-2698",
+        "City": "Fort Chesleyfield",
+        "State": "Colorado",
+        "Country": "South Georgia and the South Sandwich Islands"
       }
     ],
-    "address": [
+    "GovernmentId": [
       {
-        "type": "office",
-        "city": "Irvingstead",
-        "state": "Virginia",
-        "country": "Poland"
+        "Type": "bvn",
+        "Id": "0a9a63814dc048aea283ee38",
+        "IssuingAuthority": "Leannon, O'Hara and Rempel",
+        "ExpirationDate": "2077-06-04T00:26:46.184Z"
       }
     ],
-    "governmentId": [
+    "SocialAccounts": [
       {
-        "type": "bvn",
-        "id": "b011cf57c1e33a7a922edce2",
-        "issuingAuthority": "Mitchell - Franey",
-        "expirationDate": "2012-06-09T07:40:51.005Z"
+        "Type": "instagram",
+        "Account": "Jeremy_tms"
       }
     ],
-    "socialAccounts": [
-      {
-        "type": "twitter",
-        "account": "Emelie_tms"
-      }
-    ],
-    "countryCode": "CL",
-    "domicile": "BM",
-    "validationStatus": "vendor_suplied_data",
-    "createdAt": "2038-09-30T18:12:55.502Z"
+    "CountryCode": "DZ",
+    "Domicile": "AW",
+    "ValidationStatus": "validated",
+    "CreatedAt": "1993-05-19T07:51:28.847Z"
   },
   {
-    "_id": "fdbacfd7b4e26310d54b6ad4",
-    "type": "legal_entity",
-    "accountNumber": "4837264413",
-    "legalEntity": [
+    "Id": "c2b6eb07ac6f061c21fe48f0",
+    "Type": "legal_entity",
+    "AccountNumber": "4189464852",
+    "LegalEntity": [
       {
-        "dateOfRegisteration": "2047-06-16T00:14:50.384Z",
-        "type": "sole_proprietorship",
-        "industry": "finance",
-        "url": "www.duumyurl.com",
-        "CountryOfIncorporation": "Moldova"
+        "DateOfRegisteration": "2028-08-04T06:19:15.983Z",
+        "Type": "patnership",
+        "IndustryClassification": "ict",
+        "Url": "www.newurl.com",
+        "CountryOfIncorporation": "Cambodia"
       }
     ],
-    "companyName": "Waters Inc",
-    "displayName": "Roy Schulist",
-    "status": "terminated",
-    "monitored": "no",
-    "phoneNumber": [
+    "CompanyName": "Bayer - Ferry",
+    "FirstName": "Shanon",
+    "LastName": "Stanton",
+    "DisplayName": "Tami Bashirian",
+    "Status": "terminated",
+    "Monitored": "yes",
+    "Gender": "male",
+    "PhoneNumber": [
       {
-        "type": "home",
-        "number": "(399) 344-9587 x667"
+        "Type": "office",
+        "Number": "(834) 438-5725 x22631"
       }
     ],
-    "email": [
+    "Email": [
       {
-        "type": "office",
-        "address": "Shyann37@gmail.com"
+        "Type": "home",
+        "Address": "Shanny.Doyle93@hotmail.com"
       }
     ],
-    "address": [
+    "DateOfBirth": "1993-03-29T12:08:57.760Z",
+    "Address": [
       {
-        "type": "home",
-        "city": "Cyrilbury",
-        "state": "Mississippi",
-        "country": "Palau"
+        "AddressType": "home",
+        "Line1": "81738 Jerod Point",
+        "Line2": "Apt. 451",
+        "PostCode": "15587-6502",
+        "City": "O'Harachester",
+        "State": "Rhode Island",
+        "Country": "Saint Lucia"
       }
     ],
-    "governmentId": [
+    "GovernmentId": [
       {
-        "type": "bvn",
-        "id": "5cab3b5e12d40f0abcecc2ef",
-        "issuingAuthority": "Swaniawski - Schroeder",
-        "expirationDate": "2000-03-07T01:06:20.909Z"
+        "Type": "bvn",
+        "Id": "c487bdeadca4a7f5b169f5fb",
+        "IssuingAuthority": "Ullrich, Altenwerth and Howe",
+        "ExpirationDate": "2098-07-17T15:36:20.572Z"
       }
     ],
-    "socialAccounts": [
+    "SocialAccounts": [
       {
-        "type": "facebook",
-        "account": "Andreanne_tms"
+        "Type": "facebook",
+        "Account": "Tessie_tms"
       }
     ],
-    "countryCode": "AL",
-    "domicile": "UY",
-    "validationStatus": "due_deligence",
-    "createdAt": "2029-08-05T13:10:57.705Z"
-  },
-  {
-    "_id": "5f4dc9528ef0eb36c21aabee",
-    "type": "legal_entity",
-    "accountNumber": "8720723359",
-    "legalEntity": [
-      {
-        "dateOfRegisteration": "2056-12-14T06:38:15.306Z",
-        "type": "patnership",
-        "industry": "medical",
-        "url": "www.newurl.com",
-        "CountryOfIncorporation": "Guinea"
-      }
-    ],
-    "companyName": "Dooley, Hegmann and Veum",
-    "displayName": "Pat Dooley",
-    "status": "terminated",
-    "monitored": "yes",
-    "phoneNumber": [
-      {
-        "type": "home",
-        "number": "333-303-5232 x2125"
-      }
-    ],
-    "email": [
-      {
-        "type": "home",
-        "address": "Thomas.Toy@gmail.com"
-      }
-    ],
-    "address": [
-      {
-        "type": "office",
-        "city": "Lake Ebonyton",
-        "state": "Kansas",
-        "country": "Ethiopia"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "bvn",
-        "id": "bc0eedadcfdb4b6ceddecddf",
-        "issuingAuthority": "Hayes Inc",
-        "expirationDate": "2037-07-13T13:56:11.013Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "facebook",
-        "account": "Dulce_tms"
-      }
-    ],
-    "countryCode": "CZ",
-    "domicile": "MH",
-    "validationStatus": "validated",
-    "createdAt": "2060-05-04T14:00:45.314Z"
-  },
-  {
-    "_id": "72f86df4ee3d4f0e6cedc2f5",
-    "type": "legal_entity",
-    "accountNumber": "3374214018",
-    "legalEntity": [
-      {
-        "dateOfRegisteration": "2097-10-28T04:17:35.771Z",
-        "type": "patnership",
-        "industry": "agriculture",
-        "url": "www.duumyurl.com",
-        "CountryOfIncorporation": "Somalia"
-      }
-    ],
-    "companyName": "Graham, Wintheiser and Hammes",
-    "displayName": "Ms. Orville Weber",
-    "status": "active",
-    "monitored": "no",
-    "phoneNumber": [
-      {
-        "type": "office",
-        "number": "957-500-5034 x5068"
-      }
-    ],
-    "email": [
-      {
-        "type": "home",
-        "address": "Rosendo_Grady32@hotmail.com"
-      }
-    ],
-    "address": [
-      {
-        "type": "home",
-        "city": "Conway",
-        "state": "Alabama",
-        "country": "South Georgia and the South Sandwich Islands"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "bvn",
-        "id": "11a4ab814c09545fd9dbbafd",
-        "issuingAuthority": "Sipes, Wyman and Price",
-        "expirationDate": "2082-04-02T01:29:12.831Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "instagram",
-        "account": "Jeremie_tms"
-      }
-    ],
-    "countryCode": "PS",
-    "domicile": "UM",
-    "validationStatus": "validated",
-    "createdAt": "2023-08-16T23:09:18.892Z"
-  },
-  {
-    "_id": "d5ab2e011df174cbcf4230df",
-    "type": "legal_entity",
-    "accountNumber": "9773175519",
-    "legalEntity": [
-      {
-        "dateOfRegisteration": "2072-02-25T02:55:45.902Z",
-        "type": "patnership",
-        "industry": "medical",
-        "url": "www.duumyurl.com",
-        "CountryOfIncorporation": "Falkland Islands (Malvinas)"
-      }
-    ],
-    "companyName": "Rau Inc",
-    "displayName": "Deborah Herzog DVM",
-    "status": "terminated",
-    "monitored": "no",
-    "phoneNumber": [
-      {
-        "type": "home",
-        "number": "624-553-2831 x911"
-      }
-    ],
-    "email": [
-      {
-        "type": "office",
-        "address": "Sherman15@yahoo.com"
-      }
-    ],
-    "address": [
-      {
-        "type": "office",
-        "city": "Danport",
-        "state": "California",
-        "country": "Taiwan"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "bvn",
-        "id": "aabca89149b8d4b2ff6f45dc",
-        "issuingAuthority": "Gusikowski, Gulgowski and Walsh",
-        "expirationDate": "2084-11-13T12:19:39.138Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "twitter",
-        "account": "Annabell_tms"
-      }
-    ],
-    "countryCode": "AM",
-    "domicile": "CZ",
-    "validationStatus": "vendor_suplied_data",
-    "createdAt": "2012-01-30T06:49:08.214Z"
-  },
-  {
-    "_id": "2565688dfa2cbda4d6ec67da",
-    "type": "legal_entity",
-    "accountNumber": "7680070444",
-    "legalEntity": [
-      {
-        "dateOfRegisteration": "2042-04-18T09:34:15.101Z",
-        "type": "sole_proprietorship",
-        "industry": "agriculture",
-        "url": "www.newurl.com",
-        "CountryOfIncorporation": "Dominican Republic"
-      }
-    ],
-    "companyName": "Vandervort, Dibbert and Littel",
-    "displayName": "Hugo Labadie",
-    "status": "active",
-    "monitored": "yes",
-    "phoneNumber": [
-      {
-        "type": "office",
-        "number": "1-287-235-7773"
-      }
-    ],
-    "email": [
-      {
-        "type": "office",
-        "address": "Kelli_Koelpin@yahoo.com"
-      }
-    ],
-    "address": [
-      {
-        "type": "office",
-        "city": "Lake Carsonchester",
-        "state": "Alaska",
-        "country": "Barbados"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "nin",
-        "id": "c8f58c1d07b37431f278ae01",
-        "issuingAuthority": "Little LLC",
-        "expirationDate": "2089-04-13T20:43:18.227Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "facebook",
-        "account": "Adela_tms"
-      }
-    ],
-    "countryCode": "EH",
-    "domicile": "WS",
-    "validationStatus": "validated",
-    "createdAt": "2057-02-23T17:46:53.667Z"
-  },
-  {
-    "_id": "2fed0fb9aad5dc19cc8fcf9f",
-    "type": "legal_entity",
-    "accountNumber": "7731176675",
-    "legalEntity": [
-      {
-        "dateOfRegisteration": "2088-10-12T03:45:17.964Z",
-        "type": "patnership",
-        "industry": "ict",
-        "url": "www.newurl.com",
-        "CountryOfIncorporation": "Albania"
-      }
-    ],
-    "companyName": "Dicki - Conroy",
-    "displayName": "Mona Rolfson",
-    "status": "terminated",
-    "monitored": "yes",
-    "phoneNumber": [
-      {
-        "type": "home",
-        "number": "(629) 348-6765 x877"
-      }
-    ],
-    "email": [
-      {
-        "type": "home",
-        "address": "Matteo5@hotmail.com"
-      }
-    ],
-    "address": [
-      {
-        "type": "home",
-        "city": "Kittyshire",
-        "state": "Rhode Island",
-        "country": "Guinea"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "bvn",
-        "id": "2c7dda019d9f71e2f8b94c5d",
-        "issuingAuthority": "Bruen, Simonis and Ullrich",
-        "expirationDate": "2098-07-12T05:51:07.086Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "instagram",
-        "account": "Dariana_tms"
-      }
-    ],
-    "countryCode": "FK",
-    "domicile": "CD",
-    "validationStatus": "vendor_suplied_data",
-    "createdAt": "2004-12-29T18:11:36.712Z"
-  },
-  {
-    "_id": "0e772def5aa957b1da1de7f2",
-    "type": "individual",
-    "subType": "customer",
-    "accountNumber": "3545301240",
-    "firstName": "Trevion",
-    "lastName": "Bednar",
-    "displayName": "Gina Kautzer",
-    "status": "active",
-    "monitored": "no",
-    "gender": "male",
-    "phoneNumber": [
-      {
-        "type": "home",
-        "number": "414.464.5487 x1382"
-      }
-    ],
-    "email": [
-      {
-        "type": "office",
-        "address": "Joannie_West@gmail.com"
-      }
-    ],
-    "dateOfBirth": "1970-09-09T07:52:19.763Z",
-    "address": [
-      {
-        "type": "office",
-        "city": "Burleyport",
-        "state": "Utah",
-        "country": "Paraguay"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "bvn",
-        "id": "d171cd034c437efc19da27bd",
-        "issuingAuthority": "Ledner, Heller and Ryan",
-        "expirationDate": "2089-06-14T17:48:48.518Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "instagram",
-        "account": "Icie_tms"
-      }
-    ],
-    "countryCode": "AR",
-    "domicile": "CW",
-    "validationStatus": "validated",
-    "createdAt": "2047-09-02T04:38:06.869Z"
-  },
-  {
-    "_id": "dee3ad0a98d9d570ffeb15fb",
-    "type": "legal_entity",
-    "accountNumber": "5006747106",
-    "legalEntity": [
-      {
-        "dateOfRegisteration": "2035-06-23T00:28:23.290Z",
-        "type": "patnership",
-        "industry": "ict",
-        "url": "www.duumyurl.com",
-        "CountryOfIncorporation": "Bosnia and Herzegovina"
-      }
-    ],
-    "companyName": "Howell, Olson and Hand",
-    "displayName": "Austin Stracke",
-    "status": "active",
-    "monitored": "no",
-    "phoneNumber": [
-      {
-        "type": "home",
-        "number": "1-227-486-8435 x6273"
-      }
-    ],
-    "email": [
-      {
-        "type": "home",
-        "address": "Theresia26@gmail.com"
-      }
-    ],
-    "address": [
-      {
-        "type": "office",
-        "city": "Noblesville",
-        "state": "Mississippi",
-        "country": "Pitcairn Islands"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "drivers_license",
-        "id": "b2af47f749eb93c7fd6648d9",
-        "issuingAuthority": "Witting - Hauck",
-        "expirationDate": "2045-02-07T12:16:07.844Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "facebook",
-        "account": "Loyal_tms"
-      }
-    ],
-    "countryCode": "TD",
-    "domicile": "NI",
-    "validationStatus": "vendor_suplied_data",
-    "createdAt": "2086-08-30T23:32:11.413Z"
-  },
-  {
-    "_id": "35c0e4cd179dca5ef1a03004",
-    "type": "legal_entity",
-    "accountNumber": "2082379547",
-    "legalEntity": [
-      {
-        "dateOfRegisteration": "2067-10-11T09:01:48.923Z",
-        "type": "patnership",
-        "industry": "finance",
-        "url": "www.duumyurl.com",
-        "CountryOfIncorporation": "Virgin Islands, British"
-      }
-    ],
-    "companyName": "Heaney, Bechtelar and Weimann",
-    "displayName": "Jay Tillman",
-    "status": "active",
-    "monitored": "yes",
-    "phoneNumber": [
-      {
-        "type": "office",
-        "number": "1-292-785-2995 x544"
-      }
-    ],
-    "email": [
-      {
-        "type": "office",
-        "address": "Wanda_Schuster@yahoo.com"
-      }
-    ],
-    "address": [
-      {
-        "type": "home",
-        "city": "Taylorsville",
-        "state": "Kansas",
-        "country": "Romania"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "bvn",
-        "id": "7f0d316ad8540ac02bd4b4e3",
-        "issuingAuthority": "Koch - Abshire",
-        "expirationDate": "2038-01-19T19:48:32.908Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "instagram",
-        "account": "Lenna_tms"
-      }
-    ],
-    "countryCode": "MF",
-    "domicile": "FM",
-    "validationStatus": "validated",
-    "createdAt": "2006-08-30T13:01:59.534Z"
-  },
-  {
-    "_id": "697558fee7ffb6adf6be732c",
-    "type": "legal_entity",
-    "accountNumber": "9171039259",
-    "legalEntity": [
-      {
-        "dateOfRegisteration": "2047-08-13T03:10:39.800Z",
-        "type": "sole_proprietorship",
-        "industry": "ict",
-        "url": "www.duumyurl.com",
-        "CountryOfIncorporation": "Turks and Caicos Islands"
-      }
-    ],
-    "companyName": "Wiegand - Deckow",
-    "displayName": "Martin Langosh",
-    "status": "terminated",
-    "monitored": "yes",
-    "phoneNumber": [
-      {
-        "type": "home",
-        "number": "1-657-533-4909 x46483"
-      }
-    ],
-    "email": [
-      {
-        "type": "office",
-        "address": "Alize.Okuneva39@gmail.com"
-      }
-    ],
-    "address": [
-      {
-        "type": "home",
-        "city": "Lake Burdettebury",
-        "state": "New Jersey",
-        "country": "Finland"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "bvn",
-        "id": "cbf2acbddd23680dfe07e58a",
-        "issuingAuthority": "Berge, West and Olson",
-        "expirationDate": "2010-12-13T11:35:59.990Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "instagram",
-        "account": "Ellsworth_tms"
-      }
-    ],
-    "countryCode": "TN",
-    "domicile": "TH",
-    "validationStatus": "manual_entry",
-    "createdAt": "2023-07-15T01:46:18.556Z"
-  },
-  {
-    "_id": "f9a1d4ae30743cdc24a7dfbb",
-    "type": "individual",
-    "subType": "employee",
-    "accountNumber": "4625905523",
-    "firstName": "Hilton",
-    "lastName": "Kulas",
-    "displayName": "Kay Nolan",
-    "status": "terminated",
-    "monitored": "no",
-    "gender": "male",
-    "phoneNumber": [
-      {
-        "type": "office",
-        "number": "671.833.7866"
-      }
-    ],
-    "email": [
-      {
-        "type": "office",
-        "address": "Valentin_Zulauf78@gmail.com"
-      }
-    ],
-    "dateOfBirth": "1976-02-02T15:57:08.035Z",
-    "address": [
-      {
-        "type": "home",
-        "city": "Amosville",
-        "state": "New Mexico",
-        "country": "Belgium"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "nin",
-        "id": "9c8eeb679aaabd0ed6a9fd5f",
-        "issuingAuthority": "Fay - Reichel",
-        "expirationDate": "2077-11-10T12:26:06.904Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "facebook",
-        "account": "Quincy_tms"
-      }
-    ],
-    "countryCode": "FM",
-    "domicile": "IO",
-    "validationStatus": "unvalidated",
-    "createdAt": "2027-12-14T10:38:43.893Z"
-  },
-  {
-    "_id": "afabfcfcf1f5afcbe90e80b7",
-    "type": "legal_entity",
-    "accountNumber": "0582410790",
-    "legalEntity": [
-      {
-        "dateOfRegisteration": "2075-03-02T20:21:35.180Z",
-        "type": "sole_proprietorship",
-        "industry": "ict",
-        "url": "www.duumyurl.com",
-        "CountryOfIncorporation": "Antarctica (the territory South of 60 deg S)"
-      }
-    ],
-    "companyName": "Berge - Keebler",
-    "displayName": "Jennifer Veum",
-    "status": "terminated",
-    "monitored": "yes",
-    "phoneNumber": [
-      {
-        "type": "home",
-        "number": "249.641.0410 x60996"
-      }
-    ],
-    "email": [
-      {
-        "type": "home",
-        "address": "Berniece91@yahoo.com"
-      }
-    ],
-    "address": [
-      {
-        "type": "home",
-        "city": "Phoenix",
-        "state": "Iowa",
-        "country": "Central African Republic"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "bvn",
-        "id": "ad0bd95ebcfee392721ee594",
-        "issuingAuthority": "Bins LLC",
-        "expirationDate": "2039-02-26T19:14:20.532Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "twitter",
-        "account": "Cara_tms"
-      }
-    ],
-    "countryCode": "HK",
-    "domicile": "MC",
-    "validationStatus": "validated",
-    "createdAt": "2061-05-08T07:23:41.764Z"
-  },
-  {
-    "_id": "cdafba21d219baa0c7acf755",
-    "type": "individual",
-    "subType": "customer",
-    "accountNumber": "0570639045",
-    "firstName": "Jeremie",
-    "lastName": "Dickens",
-    "displayName": "Christy Mills",
-    "status": "active",
-    "monitored": "yes",
-    "gender": "female",
-    "phoneNumber": [
-      {
-        "type": "office",
-        "number": "1-543-858-4869 x9122"
-      }
-    ],
-    "email": [
-      {
-        "type": "home",
-        "address": "Shaun68@gmail.com"
-      }
-    ],
-    "dateOfBirth": "1954-04-29T12:52:04.990Z",
-    "address": [
-      {
-        "type": "home",
-        "city": "Amberview",
-        "state": "Illinois",
-        "country": "Slovakia (Slovak Republic)"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "drivers_license",
-        "id": "fc8b92e74be31ef582c58eac",
-        "issuingAuthority": "Kovacek and Sons",
-        "expirationDate": "2027-11-28T20:01:11.515Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "instagram",
-        "account": "Audie_tms"
-      }
-    ],
-    "countryCode": "CZ",
-    "domicile": "AE",
-    "validationStatus": "due_deligence",
-    "createdAt": "2056-12-09T17:52:43.634Z"
-  },
-  {
-    "_id": "a930b1a0aee6f6e79a0deccd",
-    "type": "individual",
-    "subType": "customer",
-    "accountNumber": "7483373534",
-    "firstName": "Wiley",
-    "lastName": "Rowe",
-    "displayName": "Geoffrey Watsica II",
-    "status": "active",
-    "monitored": "yes",
-    "gender": "male",
-    "phoneNumber": [
-      {
-        "type": "home",
-        "number": "502-721-2569 x9857"
-      }
-    ],
-    "email": [
-      {
-        "type": "office",
-        "address": "Ken78@hotmail.com"
-      }
-    ],
-    "dateOfBirth": "1958-09-13T06:56:02.232Z",
-    "address": [
-      {
-        "type": "office",
-        "city": "South Heather",
-        "state": "Michigan",
-        "country": "Saint Lucia"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "bvn",
-        "id": "ebfeccda8aa6bf6d1254e31c",
-        "issuingAuthority": "McDermott Inc",
-        "expirationDate": "1992-05-28T10:48:50.368Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "twitter",
-        "account": "Mellie_tms"
-      }
-    ],
-    "countryCode": "BZ",
-    "domicile": "MU",
-    "validationStatus": "due_deligence",
-    "createdAt": "2026-12-31T07:39:34.040Z"
-  },
-  {
-    "_id": "d25630d786a643952ddaef4b",
-    "type": "individual",
-    "subType": "customer",
-    "accountNumber": "3936229794",
-    "firstName": "Karolann",
-    "lastName": "Lind",
-    "displayName": "Lindsey Kuvalis",
-    "status": "terminated",
-    "monitored": "yes",
-    "gender": "female",
-    "phoneNumber": [
-      {
-        "type": "home",
-        "number": "(450) 656-9569 x930"
-      }
-    ],
-    "email": [
-      {
-        "type": "office",
-        "address": "Joany.Swaniawski67@yahoo.com"
-      }
-    ],
-    "dateOfBirth": "1999-05-14T10:44:01.342Z",
-    "address": [
-      {
-        "type": "home",
-        "city": "West Elise",
-        "state": "Wyoming",
-        "country": "Costa Rica"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "bvn",
-        "id": "ba4bcbddaca40dfade8caed7",
-        "issuingAuthority": "Brown, Kiehn and Homenick",
-        "expirationDate": "2074-12-09T18:09:11.170Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "facebook",
-        "account": "Chandler_tms"
-      }
-    ],
-    "countryCode": "MC",
-    "domicile": "BD",
-    "validationStatus": "unvalidated",
-    "createdAt": "2058-07-19T09:12:23.569Z"
-  },
-  {
-    "_id": "0faf6ddf9725fdadc8190efc",
-    "type": "legal_entity",
-    "accountNumber": "5909191581",
-    "legalEntity": [
-      {
-        "dateOfRegisteration": "2043-04-29T19:14:23.294Z",
-        "type": "sole_proprietorship",
-        "industry": "medical",
-        "url": "www.duumyurl.com",
-        "CountryOfIncorporation": "Virgin Islands, U.S."
-      }
-    ],
-    "companyName": "O'Conner - Rice",
-    "displayName": "Lee Fisher",
-    "status": "active",
-    "monitored": "no",
-    "phoneNumber": [
-      {
-        "type": "home",
-        "number": "(692) 369-7154"
-      }
-    ],
-    "email": [
-      {
-        "type": "office",
-        "address": "Kathlyn.Bayer@yahoo.com"
-      }
-    ],
-    "address": [
-      {
-        "type": "office",
-        "city": "Port Cortneyborough",
-        "state": "Mississippi",
-        "country": "Japan"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "nin",
-        "id": "cc672f404a4cea5e32ab4fbb",
-        "issuingAuthority": "McClure and Sons",
-        "expirationDate": "2080-06-14T19:59:04.094Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "instagram",
-        "account": "Eduardo_tms"
-      }
-    ],
-    "countryCode": "AF",
-    "domicile": "AF",
-    "validationStatus": "validated",
-    "createdAt": "1993-08-19T03:56:03.265Z"
-  },
-  {
-    "_id": "f3ccaa3ec118ca67faed6ffa",
-    "type": "legal_entity",
-    "accountNumber": "3899734201",
-    "legalEntity": [
-      {
-        "dateOfRegisteration": "2088-06-18T21:49:00.987Z",
-        "type": "sole_proprietorship",
-        "industry": "medical",
-        "url": "www.duumyurl.com",
-        "CountryOfIncorporation": "France"
-      }
-    ],
-    "companyName": "Halvorson and Sons",
-    "displayName": "Gregg Jacobs",
-    "status": "active",
-    "monitored": "yes",
-    "phoneNumber": [
-      {
-        "type": "office",
-        "number": "422-370-7043 x4357"
-      }
-    ],
-    "email": [
-      {
-        "type": "office",
-        "address": "Hubert77@hotmail.com"
-      }
-    ],
-    "address": [
-      {
-        "type": "office",
-        "city": "South Lomastad",
-        "state": "North Dakota",
-        "country": "Grenada"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "bvn",
-        "id": "ffbfc455bb22ecba2cca154a",
-        "issuingAuthority": "Crist - Shanahan",
-        "expirationDate": "2081-01-11T07:30:38.753Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "instagram",
-        "account": "Jolie_tms"
-      }
-    ],
-    "countryCode": "TD",
-    "domicile": "BY",
-    "validationStatus": "unvalidated",
-    "createdAt": "2065-01-06T12:43:12.876Z"
-  },
-  {
-    "_id": "30fa7ec5e49a697ecd8c635e",
-    "type": "legal_entity",
-    "accountNumber": "6822945731",
-    "legalEntity": [
-      {
-        "dateOfRegisteration": "2024-10-18T08:05:03.559Z",
-        "type": "patnership",
-        "industry": "agriculture",
-        "url": "www.newurl.com",
-        "CountryOfIncorporation": "Palestinian Territory"
-      }
-    ],
-    "companyName": "Russel, Christiansen and Balistreri",
-    "displayName": "Darnell Runolfsdottir",
-    "status": "terminated",
-    "monitored": "yes",
-    "phoneNumber": [
-      {
-        "type": "home",
-        "number": "1-589-834-4270 x0919"
-      }
-    ],
-    "email": [
-      {
-        "type": "home",
-        "address": "Vida_Boyle46@yahoo.com"
-      }
-    ],
-    "address": [
-      {
-        "type": "home",
-        "city": "Fort Worth",
-        "state": "Louisiana",
-        "country": "Sri Lanka"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "bvn",
-        "id": "4b2f0dfe3eff5faee54ceac0",
-        "issuingAuthority": "Waelchi Group",
-        "expirationDate": "1995-02-19T13:22:10.052Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "twitter",
-        "account": "Brannon_tms"
-      }
-    ],
-    "countryCode": "SO",
-    "domicile": "TM",
-    "validationStatus": "validated",
-    "createdAt": "2060-11-10T15:56:14.602Z"
-  },
-  {
-    "_id": "73686d190d093dcdcc6c1105",
-    "type": "legal_entity",
-    "accountNumber": "0869872897",
-    "legalEntity": [
-      {
-        "dateOfRegisteration": "2063-12-08T21:23:04.808Z",
-        "type": "sole_proprietorship",
-        "industry": "ict",
-        "url": "www.newurl.com",
-        "CountryOfIncorporation": "Malawi"
-      }
-    ],
-    "companyName": "Fadel, Ward and Block",
-    "displayName": "Miss Bessie Yundt",
-    "status": "active",
-    "monitored": "yes",
-    "phoneNumber": [
-      {
-        "type": "office",
-        "number": "747-661-1755 x853"
-      }
-    ],
-    "email": [
-      {
-        "type": "office",
-        "address": "Mikel54@hotmail.com"
-      }
-    ],
-    "address": [
-      {
-        "type": "office",
-        "city": "North Junius",
-        "state": "Vermont",
-        "country": "Grenada"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "drivers_license",
-        "id": "2b6eb7b15cfbffbcd0e14633",
-        "issuingAuthority": "Baumbach and Sons",
-        "expirationDate": "2056-01-29T14:45:24.984Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "facebook",
-        "account": "Shaylee_tms"
-      }
-    ],
-    "countryCode": "PR",
-    "domicile": "BJ",
-    "validationStatus": "manual_entry",
-    "createdAt": "2082-01-29T12:04:27.936Z"
-  },
-  {
-    "_id": "edad09375ecebbb956eae2ba",
-    "type": "individual",
-    "subType": "customer",
-    "accountNumber": "0998057623",
-    "firstName": "Antonietta",
-    "lastName": "Quitzon",
-    "displayName": "Lisa Watsica",
-    "status": "terminated",
-    "monitored": "yes",
-    "gender": "female",
-    "phoneNumber": [
-      {
-        "type": "home",
-        "number": "(484) 578-7742 x42388"
-      }
-    ],
-    "email": [
-      {
-        "type": "office",
-        "address": "Bernardo_Dickinson@hotmail.com"
-      }
-    ],
-    "dateOfBirth": "2003-03-07T10:11:30.023Z",
-    "address": [
-      {
-        "type": "office",
-        "city": "Port Lelahboro",
-        "state": "Washington",
-        "country": "Falkland Islands (Malvinas)"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "drivers_license",
-        "id": "f3180afdd2c5f695b053707c",
-        "issuingAuthority": "Goldner, Paucek and Gutkowski",
-        "expirationDate": "2055-03-07T02:25:32.109Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "facebook",
-        "account": "Imogene_tms"
-      }
-    ],
-    "countryCode": "FK",
-    "domicile": "IT",
-    "validationStatus": "due_deligence",
-    "createdAt": "2022-03-07T13:03:02.640Z"
-  },
-  {
-    "_id": "08b7ebf91c8aceb2baadb096",
-    "type": "individual",
-    "subType": "customer",
-    "accountNumber": "5489541024",
-    "firstName": "Darian",
-    "lastName": "Kautzer",
-    "displayName": "Dwight Schumm",
-    "status": "active",
-    "monitored": "yes",
-    "gender": "female",
-    "phoneNumber": [
-      {
-        "type": "home",
-        "number": "720.337.6710 x064"
-      }
-    ],
-    "email": [
-      {
-        "type": "office",
-        "address": "Greta.Mraz@yahoo.com"
-      }
-    ],
-    "dateOfBirth": "1992-04-08T08:43:02.963Z",
-    "address": [
-      {
-        "type": "office",
-        "city": "Port Kevin",
-        "state": "New Jersey",
-        "country": "Virgin Islands, British"
-      }
-    ],
-    "governmentId": [
-      {
-        "type": "drivers_license",
-        "id": "06b8e1fe08bcb14588c7c4be",
-        "issuingAuthority": "Hansen - Waelchi",
-        "expirationDate": "2091-09-10T10:31:42.096Z"
-      }
-    ],
-    "socialAccounts": [
-      {
-        "type": "facebook",
-        "account": "Clarabelle_tms"
-      }
-    ],
-    "countryCode": "NF",
-    "domicile": "MG",
-    "validationStatus": "vendor_suplied_data",
-    "createdAt": "2080-12-03T22:47:20.492Z"
+    "CountryCode": "TZ",
+    "Domicile": "MS",
+    "ValidationStatus": "validated",
+    "CreatedAt": "2083-03-20T20:19:30.866Z"
   }
 ]

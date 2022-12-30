@@ -76,12 +76,12 @@ const createRuleSchema = async  (payload) => {
           return value;
         }),
         operation: Joi.string().valid(...arithmeticOperators),
-        action: Joi.string(),
-        actionField: Joi.string(),
-        filterFields: Joi.array(),
-        dateRange: Joi.array(),
-        compareTo: Joi.string(),
-        includeCurrent: Joi.boolean()
+        action: Joi.string().allow(null),
+        actionField: Joi.string().allow(null),
+        filterFields: Joi.array().allow(null),
+        dateRange: Joi.array().allow(null),
+        compareTo: Joi.string().allow(null),
+        includeCurrent: Joi.boolean().allow(null)
 
       })
     })

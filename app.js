@@ -35,18 +35,17 @@ app.post('/v1/tms/actors/generate', (req, res) => {
             actors.push(actor);
           }
           actors.map((actor) => {
-            if (actor.type === "individual") {
+            if (actor.Type === "individual") {
               // eslint-disable-next-line no-param-reassign
-              delete actor.legalEntity;
-              delete actor.companyName;
+              delete actor.LegalEntity;
+              delete actor.CompanyName;
             }
             if (actor.type === "legal_entity") {
               // eslint-disable-next-line no-param-reassign
-              delete actor.subType;
-              delete actor.dateOfBirth;
-              delete actor.gender;
-              delete actor.firstName;
-              delete actor.lastName;
+              delete actor.DateOfBirth;
+              delete actor.Gender;
+              delete actor.FirstName;
+              delete actor.LastName;
             }
             return actor;
           });
@@ -92,8 +91,8 @@ app.post('/v1/tms/transactions/generate', (req, res) => {
         }
 
         transactions.map((transaction) => {
-          if (transaction.transactionMethod !== "check") {
-            delete transaction.checkNumber;
+          if (transaction.TransactionMethod !== "check") {
+            delete transaction.CheckNumber;
           }
           return transaction;
         });
@@ -197,18 +196,18 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
         Actors.map((actor) => {
           if (actor.accountNumber === accountNumber) {
             newTransaction = {
-              _id: faker.database.mongodbObjectId(),
+              Id: faker.database.mongodbObjectId(),
               ...payload,
-              actor: actor,
-              actorPepMatch: faker.helpers.arrayElement([true, false]),
-              actorCrimeListMatch: faker.helpers.arrayElement([true, false]),
-              actorWatchListMatch: faker.helpers.arrayElement([true, false]),
-              actorSanctionListMatch: faker.helpers.arrayElement([true, false]),
-              beneficiaryPepMatch: faker.helpers.arrayElement([true, false]),
-              beneficiaryCrimeListMatch: faker.helpers.arrayElement([true, false]),
-              beneficiaryWatchListMatch: faker.helpers.arrayElement([true, false]),
-              beneficiarySanctionListMatch: faker.helpers.arrayElement([true, false]),
-              createdAt: faker.datatype.datetime(),
+              Actor: actor,
+              ActorPepMatch: faker.helpers.arrayElement([true, false]),
+              ActorCrimeListMatch: faker.helpers.arrayElement([true, false]),
+              ActorWatchListMatch: faker.helpers.arrayElement([true, false]),
+              ActorSanctionListMatch: faker.helpers.arrayElement([true, false]),
+              BeneficiaryPepMatch: faker.helpers.arrayElement([true, false]),
+              BeneficiaryCrimeListMatch: faker.helpers.arrayElement([true, false]),
+              BeneficiaryWatchListMatch: faker.helpers.arrayElement([true, false]),
+              BeneficiarySanctionListMatch: faker.helpers.arrayElement([true, false]),
+              CreatedAt: faker.datatype.datetime(),
               
             };
           }
@@ -216,17 +215,17 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
         });
         if (newTransaction === undefined) {
             const data = {
-                _id: faker.database.mongodbObjectId(),
+              Id: faker.database.mongodbObjectId(),
                 ...payload,
-              actorPepMatch: faker.helpers.arrayElement([true, false]),
-              actorCrimeListMatch: faker.helpers.arrayElement([true, false]),
-              actorWatchListMatch: faker.helpers.arrayElement([true, false]),
-              actorSanctionListMatch: faker.helpers.arrayElement([true, false]),
-              beneficiaryPepMatch: faker.helpers.arrayElement([true, false]),
-              beneficiaryCrimeListMatch: faker.helpers.arrayElement([true, false]),
-              beneficiaryWatchListMatch: faker.helpers.arrayElement([true, false]),
-              beneficiarySanctionListMatch: faker.helpers.arrayElement([true, false]),
-              createdAt: faker.datatype.datetime(),
+              ActorPepMatch: faker.helpers.arrayElement([true, false]),
+              ActorCrimeListMatch: faker.helpers.arrayElement([true, false]),
+              ActorWatchListMatch: faker.helpers.arrayElement([true, false]),
+              ActorSanctionListMatch: faker.helpers.arrayElement([true, false]),
+              BeneficiaryPepMatch: faker.helpers.arrayElement([true, false]),
+              BeneficiaryCrimeListMatch: faker.helpers.arrayElement([true, false]),
+              BeneficiaryWatchListMatch: faker.helpers.arrayElement([true, false]),
+              BeneficiarySanctionListMatch: faker.helpers.arrayElement([true, false]),
+              CreatedAt: faker.datatype.datetime(),
               }
           Transaction.push(data);
           const msg = JSON.stringify(data)
@@ -261,7 +260,7 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
 })
 
 app.listen(port, async () => {
-    await consumeMessage("transaction-topic")
+    await consumeMessage("rule-topic")
     console.log(`server is up and running on port ${port}`)
 
 })
