@@ -180,7 +180,7 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
         message: error.details[0].message
     })
     try {
-        const accountNumber = payload.accountNumber;
+        const accountNumber = payload.AccountNumber;
         const actors = fs.readFileSync("data/actors.json", "utf-8");
         const doc = JSON.parse(actors);
         const Actors = Array.from(doc);
@@ -229,11 +229,11 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
               }
           Transaction.push(data);
           const msg = JSON.stringify(data)
-         await produceMessage("transaction-topic", msg) 
+         await produceMessage("enriched_transaction_request", msg) 
         } else {
           Transaction.push(newTransaction); 
           const msg = JSON.stringify(newTransaction)
-          await produceMessage("transaction-topic", msg)        
+          await produceMessage("enriched_transaction_request", msg)        
         }
         
 
@@ -260,7 +260,7 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
 })
 
 app.listen(port, async () => {
-    await consumeMessage("rule-topic")
+    await consumeMessage("enriched_transaction_request")
     console.log(`server is up and running on port ${port}`)
 
 })
