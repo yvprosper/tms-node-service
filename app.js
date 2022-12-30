@@ -194,7 +194,7 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
 
         let newTransaction;
         Actors.map((actor) => {
-          if (actor.AccountNumber === accountNumber) {
+          if (actor.accountNumber === accountNumber) {
             newTransaction = {
               Id: faker.database.mongodbObjectId(),
               ...payload,

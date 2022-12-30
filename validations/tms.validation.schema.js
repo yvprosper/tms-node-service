@@ -10,26 +10,26 @@ const Transactions = Array.from(doc);
 // validation for creating a transaction
 const createTransactionSchema = async  (payload) => {
   const schema = Joi.object({
-  TransactionDate: Joi.string().required(),
-  TransactionAmount: Joi.string().required(),
-  Channel: Joi.string().valid("branch", "online", "atm", "pos", "mobile", "unknown").required(),
-  Category: Joi.string().valid("deposit", "withdrawal", "transfer", "webPurchase").required(),
-  AccountNumber: Joi.string().required(),
-  LocalTransactionAmount: Joi.string(),
-  CardNumber: Joi.string(),
-  AccountBalance: Joi.string(),
-  ChannelLocation: Joi.string(),
-  CheckNumber: Joi.string(),
-  ChannelIpAddress: Joi.string(),
-  InternationalTransfer: Joi.boolean(),
-  MerchantCategoryCode: Joi.string().min(4).max(4).required(),
-  MerchantCountryCode: Joi.string().required(),
-  Currency: Joi.string().min(2).required(),
-  Description: Joi.string(),
-  TransactionStatus: Joi.string()
+  transactionDate: Joi.string().required(),
+  transactionAmount: Joi.string().required(),
+  channel: Joi.string().valid("branch", "online", "atm", "pos", "mobile", "unknown").required(),
+  category: Joi.string().valid("deposit", "withdrawal", "transfer", "webPurchase").required(),
+  accountNumber: Joi.string().required(),
+  localTransactionAmount: Joi.string(),
+  cardNumber: Joi.string(),
+  accountBalance: Joi.string(),
+  channelLocation: Joi.string(),
+  checkNumber: Joi.string(),
+  channelIpAddress: Joi.string(),
+  internationalTransfer: Joi.boolean(),
+  merchantCategoryCode: Joi.string().min(4).max(4).required(),
+  merchantCountryCode: Joi.string().required(),
+  currency: Joi.string().min(2).required(),
+  description: Joi.string(),
+  transactionStatus: Joi.string()
     .valid("completed", "accepted", "rejected", "pending", "canceled", "acknowledged", "paused")
     .required(),
-  TransactionMethod: Joi.string()
+  transactionMethod: Joi.string()
     .valid(
     "fee",
     "interest",
@@ -41,17 +41,17 @@ const createTransactionSchema = async  (payload) => {
     "reversal",
     )
     .required(),
-  TransactionBeneficiary: Joi.object().keys({
-    Id: Joi.string().required(),
-    Type: Joi.string().valid("individual", "legal entity"),
-    Name: Joi.string().required(),
-    AccountNumber: Joi.string().min(10).max(10),
-    Address: Joi.string(),
-    BankName: Joi.string(),
-    Bic: Joi.string().min(11).max(11),
-    Iban: Joi.string().min(14).max(14),
-    MerchantCategoryCode: Joi.string().min(4).max(4),
-    MerchantCountryCode: Joi.string(),
+  transactionBeneficiary: Joi.object().keys({
+    id: Joi.string().required(),
+    type: Joi.string().valid("individual", "legal entity"),
+    name: Joi.string().required(),
+    accountNumber: Joi.string().min(10).max(10),
+    address: Joi.string(),
+    bankName: Joi.string(),
+    bic: Joi.string().min(11).max(11),
+    iban: Joi.string().min(14).max(14),
+    merchantCategoryCode: Joi.string().min(4).max(4),
+    merchantCountryCode: Joi.string(),
   })
   }).unknown();
   return schema.validate(payload);
