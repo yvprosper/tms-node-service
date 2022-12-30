@@ -1084,5 +1084,49 @@
         ]
       }
     ]
+  },
+  {
+    "name": "High Risk",
+    "desc": "this rule checks for transactions coming from flagged locations",
+    "salience": 8,
+    "when": {
+      "and": [
+        {
+          "eq": [
+            {
+              "call": [
+                "CF.Aggregation",
+                {
+                  "const": "{'action': sum , 'filter_fields': [{'name':['john','tina']}], 'action_field': Salary, 'date_range': 2022-12-10,2022-12-14})"
+                }
+              ]
+            },
+            {
+              "obj": "Transaction.speed"
+            }
+          ]
+        }
+      ]
+    },
+    "then": [
+      {
+        "set": [
+          {
+            "obj": "Transaction.Tag"
+          },
+          {
+            "const": "High Risk Jurisdiction"
+          }
+        ]
+      },
+      {
+        "call": [
+          "Retract",
+          {
+            "const": "High Risk"
+          }
+        ]
+      }
+    ]
   }
 ]
