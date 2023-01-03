@@ -4,7 +4,7 @@ const { faker } = require('@faker-js/faker');
 const createFakeActor = () => {
   const actor = {
     Id: faker.database.mongodbObjectId(),
-    Type: faker.helpers.arrayElement(["individual", "legal_entity"]),
+    ActorType: faker.helpers.arrayElement(["individual", "legal_entity"]),
     AccountNumber: faker.finance.account(10),
     LegalEntity: [
       {
@@ -15,26 +15,22 @@ const createFakeActor = () => {
         CountryOfIncorporation: faker.address.country()
       },
     ],
-    CompanyName: faker.company.name(),
     FirstName: faker.name.firstName(),
     LastName: faker.name.lastName(),
-    DisplayName: faker.name.fullName(),
     Status: faker.helpers.arrayElement(["active", "terminated"]),
-    Monitored: faker.helpers.arrayElement(["yes", "no"]),
     Gender: faker.name.sexType(),
-    PhoneNumber: [
+    Phones: [
       {
-        Type: faker.helpers.arrayElement(["home", "office"]),
+        NumberType: faker.helpers.arrayElement(["home", "office"]),
         Number: faker.phone.number(),
       },
     ],
-    Email: [
+    Emails: [
       {
-        Type: faker.helpers.arrayElement(["home", "office"]),
+        EmailType: faker.helpers.arrayElement(["home", "office"]),
         Address: faker.internet.email(),
       },
     ],
-    DateOfBirth: faker.date.birthdate({ min: 18, max: 65, mode: 'age' }),
     Address: [
       {
         AddressType: faker.helpers.arrayElement(["home", "office"]),
@@ -48,27 +44,13 @@ const createFakeActor = () => {
     ],
     GovernmentId: [
       {
-        Type: faker.helpers.arrayElement(["drivers_license", "bvn", "nin"]),
-        Id: faker.database.mongodbObjectId(),
+        IdType: faker.helpers.arrayElement(["drivers_license", "bvn", "nin"]),
+        GovernmentId: faker.database.mongodbObjectId(),
         IssuingAuthority: faker.company.name(),
         ExpirationDate: faker.datatype.datetime(),
       },
     ],
-    SocialAccounts: [
-      {
-        Type: faker.helpers.arrayElement(["facebook", "twitter", "instagram"]),
-        Account: `${faker.name.firstName()}_tms`,
-      },
-    ],
-    CountryCode: faker.address.countryCode(),
     Domicile: faker.address.countryCode(),
-    ValidationStatus: faker.helpers.arrayElement([
-      "unvalidated",
-      "validated",
-      "due_deligence",
-      "vendor_suplied_data",
-      "manual_entry",
-    ]),
     CreatedAt: faker.datatype.datetime(),
   };
 
@@ -79,12 +61,12 @@ const createFakeTransaction = () => {
   const transaction = {
     Id: faker.database.mongodbObjectId(),
     Channel: faker.helpers.arrayElement(["branch", "online", "atm", "pos", "mobile", "unknown"]),
-    AccountNumber: faker.finance.account(10),
-    TransactionDate: faker.datatype.datetime(),
-    TransactionAmount: faker.commerce.price(),
-    LocalTransactionAmount: faker.commerce.price(),
+    AccountNumber: "2969798617",
+    EntryDate: faker.date.between('2022-01-01T00:00:00.000Z', '2022-12-31T00:00:00.000Z'),
+    Amount: faker.commerce.price(),
+    LocalAmount: faker.commerce.price(),
     CardNumber: faker.finance.creditCardNumber(),
-    AccountBalance: faker.commerce.price(),
+    Balance: faker.commerce.price(),
     ChannelLocation: faker.address.city(),
     Category: faker.helpers.arrayElement(["deposit", "withdrawal", "transfer", "webPurchase"]),
     TransactionMethod: faker.helpers.arrayElement([
@@ -100,9 +82,9 @@ const createFakeTransaction = () => {
     Currency: faker.finance.currencyCode(),
     CheckNumber: faker.finance.creditCardNumber(),
     ChannelIpAddress: faker.internet.ipv4(),
-    InternationalTransfer: faker.helpers.arrayElement([true, false]),
+    InternationalTransaction: faker.helpers.arrayElement([true, false]),
     Description: faker.lorem.lines(),
-    TransactionStatus: faker.helpers.arrayElement([
+    Status: faker.helpers.arrayElement([
       "completed",
       "pending",
       "accepted",
@@ -113,7 +95,7 @@ const createFakeTransaction = () => {
     ]),
     MerchantCategoryCode: faker.datatype.number(10000),
     MerchantCountryCode: faker.address.countryCode(),
-    TransactionBeneficiary:
+    Beneficiary:
       {
         Id: faker.database.mongodbObjectId(),
         Type: faker.helpers.arrayElement(["individual", "legal_entity"]),
@@ -126,7 +108,65 @@ const createFakeTransaction = () => {
         MerchantCategoryCode: faker.datatype.number(10000),
         MerchantCountryCode: faker.address.countryCode(),
       },
-    CreatedAt: faker.datatype.datetime(),
+      "Actor": {
+        "Id": "a2a23b5dde3467eeab1ebcea",
+        "ActorType": "legal_entity",
+        "AccountNumber": "2969798617",
+        "LegalEntity": [
+          {
+            "DateOfRegisteration": "2013-04-14T01:24:17.320Z",
+            "Type": "patnership",
+            "IndustryClassification": "agriculture",
+            "Url": "www.duumyurl.com",
+            "CountryOfIncorporation": "Poland"
+          }
+        ],
+        "FirstName": "Ocie",
+        "LastName": "Barrows",
+        "Status": "active",
+        "Phones": [
+          {
+            "NumberType": "office",
+            "Number": "1-992-793-3997 x306"
+          }
+        ],
+        "Emails": [
+          {
+            "EmailType": "office",
+            "Address": "ociebarrowsinc@hotmail.com"
+          }
+        ],
+        "Address": [
+          {
+            "AddressType": "office",
+            "Line1": "96566 Gleichner Course",
+            "Line2": "Suite 377",
+            "PostCode": "03620",
+            "City": "North Destiniton",
+            "State": "Georgia",
+            "Country": "Israel"
+          }
+        ],
+        "GovernmentId": [
+          {
+            "IdType": "cac",
+            "GovernmentId": "2539ec6a0d5d8703d997a7ca",
+            "IssuingAuthority": "cac",
+            "ExpirationDate": "2017-09-15T11:06:19.110Z"
+          }
+        ],
+        "Domicile": "NA",
+        "CreatedAt": "2087-02-05T21:54:34.195Z"
+      },
+      "ActorPepMatch": true,
+      "ActorCrimeListMatch": false,
+      "ActorWatchListMatch": false,
+      "ActorSanctionListMatch": false,
+      "BeneficiaryPepMatch": true,
+      "BeneficiaryCrimeListMatch": true,
+      "BeneficiaryWatchListMatch": true,
+      "BeneficiarySanctionListMatch": true,
+      "CreatedAt": "2003-10-20T04:25:13.946Z"
   };
 
   return transaction;

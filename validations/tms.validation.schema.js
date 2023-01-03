@@ -64,7 +64,7 @@ const createRuleSchema = async  (payload) => {
   name: Joi.string().required(),
   desc: Joi.string().required(),
   priority: Joi.number().required(),
-  groupOperator: Joi.string().valid(...logicalOperators).required(),
+  groupOperator: Joi.string().allow(null).valid(...logicalOperators).required(),
   score: Joi.number().required(),
   tag: Joi.string().required(),
   groups: Joi.array().items({

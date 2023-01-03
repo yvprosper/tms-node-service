@@ -1,6 +1,7 @@
 const arrangeRuleObject = (data) => {
   const orderWhenObject = () => {
     const arr = [];
+    let grp = {}
     data.groups.map((group)=> {
       for (let i = 0; i < group.sentences.length; i += 1) {
         let firstObject;
@@ -17,22 +18,28 @@ const arrangeRuleObject = (data) => {
         } else{
           secondObject = {obj: `${data.header}.${group.sentences[i].compareTo}`}
         }
-        arr.push({
+        grp = {
           [`${group.sentences[`${i}`].operation}`]: [
             
              firstObject,
              secondObject,
           ],
-        });
+        }
       }
     })
-    
-    return arr;
+    let whenObj;
+    if (data.groupOperator !== null) {
+      arr.push(grp);
+      whenObj = {[data.groupOperator]: arr}
+    } else {
+      whenObj = grp
+    }
+    return whenObj;
   };
   const orderThenArray = () => {
     const arr = [];
       arr.push({
-        set: [{ obj: `${data.header}.Tag`},
+        set: [{ obj: `Alert.Tag`},
         { const: data.tag }],
       },
       {
@@ -45,9 +52,7 @@ const arrangeRuleObject = (data) => {
     name: data.name,
     desc: data.desc,
     salience: data.priority,
-    when: {
-      [data.groupOperator]: orderWhenObject(),
-    },
+    when: orderWhenObject(),
     then: orderThenArray(),
   };
   return rule;

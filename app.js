@@ -35,17 +35,13 @@ app.post('/v1/tms/actors/generate', (req, res) => {
             actors.push(actor);
           }
           actors.map((actor) => {
-            if (actor.Type === "individual") {
+            if (actor.ActorType === "individual") {
               // eslint-disable-next-line no-param-reassign
               delete actor.LegalEntity;
-              delete actor.CompanyName;
             }
-            if (actor.type === "legal_entity") {
+            if (actor.ActorType === "legal_entity") {
               // eslint-disable-next-line no-param-reassign
-              delete actor.DateOfBirth;
               delete actor.Gender;
-              delete actor.FirstName;
-              delete actor.LastName;
             }
             return actor;
           });
@@ -94,6 +90,14 @@ app.post('/v1/tms/transactions/generate', (req, res) => {
           if (transaction.TransactionMethod !== "check") {
             delete transaction.CheckNumber;
           }
+          if (transaction.Actor.ActorType === "individual") {
+            // eslint-disable-next-line no-param-reassign
+            delete transaction.Actor.LegalEntity;
+          }
+          if (transaction.Actor.ActorType === "legal_entity") {
+            // eslint-disable-next-line no-param-reassign
+            delete transaction.Actor.Gender;
+          }
           return transaction;
         });
 
@@ -138,25 +142,37 @@ app.post('/v1/tms/rule/new', async (req, res) => {
         message: error.details[0].message
     })
     try {
-        const newRule = arrangeRuleObject(payload);
-        const alreadySavedRules = fs.readFileSync(
-          "data/rules.json",
-          "utf-8"
-        );
-        const doc = JSON.parse(alreadySavedRules);
-        const arr = Array.from(doc);
-
-        arr.push(newRule);
-        const msg = JSON.stringify(newRule)
-        await produceMessage("rule-topic", msg)
-
+      const newRule = arrangeRuleObject(payload);
+      if (!fs.existsSync(`workflows/${payload.workFlow}`)) {
+        let arr = []
+        arr.push(newRule)
         const data = JSON.stringify(arr, null, 2);
-        fs.writeFile("data/rules.json", data, (err) => {
-          if (err) {
-            throw new Error("error saving rule to json file");
-          }
-          console.log("successful");
-        });
+        fs.mkdirSync(`workflows/${payload.workFlow}`)
+        fs.writeFileSync(`workflows/${payload.workFlow}/v${payload.version}.json`,data)
+      } else {
+        if (!fs.existsSync(`workflows/${payload.workFlow}/v${payload.version}.json`)){
+          const alreadySavedRules = fs.readFileSync(
+            `workflows/${payload.workFlow}/v${payload.version - 1}.json`,
+            "utf-8"
+          );
+
+          const doc = JSON.parse(alreadySavedRules);
+          const arr = Array.from(doc);
+          arr.push(newRule)
+          const data = JSON.stringify(arr, null, 2);
+          fs.writeFileSync(`workflows/${payload.workFlow}/v${payload.version}.json`, data)
+        } 
+      }
+      const data = fs.readFileSync(
+        `workflows/${payload.workFlow}/v${payload.version}.json`,
+        "utf-8"
+      );
+        const msg = {
+          workflow: payload.workFlow,
+          version: payload.version,
+          data
+        }
+       await produceMessage("rule-topic", JSON.stringify(msg))
         res.status(201).json({
             success: true,
             msg: "sucessfully created rule",
@@ -260,7 +276,7 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
 })
 
 app.listen(port, async () => {
-    await consumeMessage("enriched_transaction_request")
+   await consumeMessage("rule-topic")
     console.log(`server is up and running on port ${port}`)
 
 })
