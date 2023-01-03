@@ -167,11 +167,14 @@ app.post('/v1/tms/rule/new', async (req, res) => {
         `workflows/${payload.workFlow}/v${payload.version}.json`,
         "utf-8"
       );
+
+        const dataObj = JSON.parse(data)
         const msg = {
           workflow: payload.workFlow,
           version: payload.version,
-          data
+          data: dataObj
         }
+        
        await produceMessage("rule-topic", JSON.stringify(msg))
         res.status(201).json({
             success: true,
