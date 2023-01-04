@@ -197,11 +197,11 @@ app.post('/v1/tms/rule/new', async (req, res) => {
 
 app.post('/v1/tms/transaction/new', async (req, res) => {
     const payload = req.body
-    const {error} = await createTransactionSchema(payload)
-    if (error) return res.status(400).json({
-        success: false,
-        message: error.details[0].message
-    })
+    // const {error} = await createTransactionSchema(payload)
+    // if (error) return res.status(400).json({
+    //     success: false,
+    //     message: error.details[0].message
+    // })
     try {
         const accountNumber = payload.transaction.AccountNumber;
         const actors = fs.readFileSync("data/actors.json", "utf-8");
