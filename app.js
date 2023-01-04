@@ -142,40 +142,44 @@ app.post('/v1/tms/rule/new', async (req, res) => {
         message: error.details[0].message
     })
     try {
-      const newRule = arrangeRuleObject(payload);
-      if (!fs.existsSync(`workflows/${payload.workFlow}`)) {
-        let arr = []
-        arr.push(newRule)
-        const data = JSON.stringify(arr, null, 2);
-        fs.mkdirSync(`workflows/${payload.workFlow}`)
-        fs.writeFileSync(`workflows/${payload.workFlow}/v${payload.version}.json`,data)
-      } else {
-        if (!fs.existsSync(`workflows/${payload.workFlow}/v${payload.version}.json`)){
-          const alreadySavedRules = fs.readFileSync(
-            `workflows/${payload.workFlow}/v${payload.version - 1}.json`,
-            "utf-8"
-          );
+      const newRule = []
+      payload.rules.map((rule)=> {
+        const ruleObj = arrangeRuleObject(rule);
+        newRule.push(ruleObj)
 
-          const doc = JSON.parse(alreadySavedRules);
-          const arr = Array.from(doc);
-          arr.push(newRule)
-          const data = JSON.stringify(arr, null, 2);
-          fs.writeFileSync(`workflows/${payload.workFlow}/v${payload.version}.json`, data)
-        } 
-      }
-      const data = fs.readFileSync(
-        `workflows/${payload.workFlow}/v${payload.version}.json`,
-        "utf-8"
-      );
-
-        const dataObj = JSON.parse(data)
-        const msg = {
-          workflow: payload.workFlow,
-          version: payload.version,
-          data: dataObj
+      })
+        if (!fs.existsSync(`workflows/${payload.workFlow}`)) {
+          const data = JSON.stringify(newRule, null, 2);
+          fs.mkdirSync(`workflows/${payload.workFlow}`)
+          fs.writeFileSync(`workflows/${payload.workFlow}/v${payload.version}.json`,data)
+        } else {
+          if (!fs.existsSync(`workflows/${payload.workFlow}/v${payload.version}.json`)){
+            const alreadySavedRules = fs.readFileSync(
+              `workflows/${payload.workFlow}/v${payload.version - 1}.json`,
+              "utf-8"
+            );
+  
+            const doc = JSON.parse(alreadySavedRules);
+            const arr = Array.from(doc);
+            arr.push(...newRule)
+            const data = JSON.stringify(arr, null, 2);
+            fs.writeFileSync(`workflows/${payload.workFlow}/v${payload.version}.json`, data)
+          } 
         }
-        
-       await produceMessage("rule-topic", JSON.stringify(msg))
+        const data = fs.readFileSync(
+          `workflows/${payload.workFlow}/v${payload.version}.json`,
+          "utf-8"
+        );
+  
+          const dataObj = JSON.parse(data)
+          const msg = {
+            workflow: payload.workFlow,
+            version: payload.version,
+            data: dataObj
+          }
+
+         await produceMessage("rule-topic", JSON.stringify(msg))
+    
         res.status(201).json({
             success: true,
             msg: "sucessfully created rule",
@@ -199,7 +203,7 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
         message: error.details[0].message
     })
     try {
-        const accountNumber = payload.AccountNumber;
+        const accountNumber = payload.transaction.AccountNumber;
         const actors = fs.readFileSync("data/actors.json", "utf-8");
         const doc = JSON.parse(actors);
         const Actors = Array.from(doc);
@@ -247,12 +251,20 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
               CreatedAt: faker.datatype.datetime(),
               }
           Transaction.push(data);
-          const msg = JSON.stringify(data)
-         await produceMessage("enriched_transaction_request", msg) 
+          const msg = {
+          workflow: payload.workFlow,
+          version: payload.version,
+          data
+          }
+         await produceMessage("enriched_transaction_request",JSON.stringify(msg)) 
         } else {
           Transaction.push(newTransaction); 
-          const msg = JSON.stringify(newTransaction)
-          await produceMessage("enriched_transaction_request", msg)        
+          const msg = {
+            workflow: payload.workFlow,
+            version: payload.version,
+            data: newTransaction
+            }
+           await produceMessage("enriched_transaction_request",JSON.stringify(msg))        
         }
         
 
@@ -279,7 +291,7 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
 })
 
 app.listen(port, async () => {
-   await consumeMessage("rule-topic")
+  await consumeMessage("rule-topic")
     console.log(`server is up and running on port ${port}`)
 
 })

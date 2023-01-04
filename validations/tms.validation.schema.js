@@ -6,27 +6,29 @@ const doc = JSON.parse(data);
 const Transactions = Array.from(doc);
 
 
-
 // validation for creating a transaction
 const createTransactionSchema = async  (payload) => {
   const schema = Joi.object({
-  transactionDate: Joi.string().required(),
-  transactionAmount: Joi.string().required(),
+  workFlow: Joi.string().required(),
+  version: Joi.number().required(),
+  transaction: Joi.object().keys({
+    entryDate: Joi.string().required(),
+  amount: Joi.string().required(),
   channel: Joi.string().valid("branch", "online", "atm", "pos", "mobile", "unknown").required(),
   category: Joi.string().valid("deposit", "withdrawal", "transfer", "webPurchase").required(),
   accountNumber: Joi.string().required(),
-  localTransactionAmount: Joi.string(),
+  localAmount: Joi.string(),
   cardNumber: Joi.string(),
-  accountBalance: Joi.string(),
+  balance: Joi.string(),
   channelLocation: Joi.string(),
   checkNumber: Joi.string(),
   channelIpAddress: Joi.string(),
-  internationalTransfer: Joi.boolean(),
-  merchantCategoryCode: Joi.string().min(4).max(4).required(),
+  internationalTransaction: Joi.boolean(),
+  merchantCategoryCode: Joi.number().required(),
   merchantCountryCode: Joi.string().required(),
   currency: Joi.string().min(2).required(),
   description: Joi.string(),
-  transactionStatus: Joi.string()
+  status: Joi.string()
     .valid("completed", "accepted", "rejected", "pending", "canceled", "acknowledged", "paused")
     .required(),
   transactionMethod: Joi.string()
@@ -41,17 +43,18 @@ const createTransactionSchema = async  (payload) => {
     "reversal",
     )
     .required(),
-  transactionBeneficiary: Joi.object().keys({
+  beneficiary: Joi.object().keys({
     id: Joi.string().required(),
-    type: Joi.string().valid("individual", "legal entity"),
+    type: Joi.string().valid("individual", "legal_entity"),
     name: Joi.string().required(),
     accountNumber: Joi.string().min(10).max(10),
     address: Joi.string(),
     bankName: Joi.string(),
     bic: Joi.string().min(11).max(11),
     iban: Joi.string().min(14).max(14),
-    merchantCategoryCode: Joi.string().min(4).max(4),
+    merchantCategoryCode: Joi.number(),
     merchantCountryCode: Joi.string(),
+  })
   })
   }).unknown();
   return schema.validate(payload);
@@ -60,14 +63,17 @@ const createTransactionSchema = async  (payload) => {
 // validation for creating a rule
 const createRuleSchema = async  (payload) => {
   const schema = Joi.object({
-  header: Joi.string().required(),
-  name: Joi.string().required(),
-  desc: Joi.string().required(),
-  priority: Joi.number().required(),
-  groupOperator: Joi.string().allow(null).valid(...logicalOperators).required(),
-  score: Joi.number().required(),
-  tag: Joi.string().required(),
-  groups: Joi.array().items({
+  workFlow: Joi.string().required(),
+  version: Joi.number().required(),
+  rules: Joi.array().items({
+    header: Joi.string().required(),
+    name: Joi.string().required(),
+    desc: Joi.string().required(),
+    priority: Joi.number().required(),
+    groupOperator: Joi.string().allow(null).valid(...logicalOperators).required(),
+    score: Joi.number().required(),
+    tag: Joi.string().required(),
+    groups: Joi.array().items({
       operator: Joi.string().valid(...logicalOperators) ,
       sentences: Joi.array().items({
         type: Joi.string().valid("static", "dynamic"),
@@ -85,6 +91,7 @@ const createRuleSchema = async  (payload) => {
 
       })
     })
+  })
   }).unknown();
   return schema.validate(payload);
 };
