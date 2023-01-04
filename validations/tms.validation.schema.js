@@ -13,11 +13,11 @@ const createTransactionSchema = async  (payload) => {
   version: Joi.number().required(),
   transaction: Joi.object().keys({
     entryDate: Joi.string().required(),
-  amount: Joi.string().required(),
+  amount: Joi.number().required(),
   channel: Joi.string().valid("branch", "online", "atm", "pos", "mobile", "unknown").required(),
   category: Joi.string().valid("deposit", "withdrawal", "transfer", "webPurchase").required(),
   accountNumber: Joi.string().required(),
-  localAmount: Joi.string(),
+  localAmount: Joi.number(),
   cardNumber: Joi.string(),
   balance: Joi.string(),
   channelLocation: Joi.string(),

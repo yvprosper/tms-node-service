@@ -3,55 +3,55 @@ const { faker } = require('@faker-js/faker');
 
 const createFakeActor = () => {
   const actor = {
-    Id: faker.database.mongodbObjectId(),
-    ActorType: faker.helpers.arrayElement(["individual", "legal_entity"]),
-    AccountNumber: faker.finance.account(10),
-    LegalEntity: [
+    id: faker.database.mongodbObjectId(),
+    actorType: faker.helpers.arrayElement(["individual", "legal_entity"]),
+    accountNumber: faker.finance.account(10),
+    legalEntity: [
       {
-        DateOfRegisteration: faker.datatype.datetime(),
-        Type: faker.helpers.arrayElement(["sole_proprietorship", "patnership"]),
-        IndustryClassification: faker.helpers.arrayElement(["ict", "agriculture", "medical", "finance"]),
-        Url: faker.helpers.arrayElement(["www.duumyurl.com", "www.newurl.com"]),
-        CountryOfIncorporation: faker.address.country()
+        dateOfRegisteration: faker.datatype.datetime(),
+        type: faker.helpers.arrayElement(["sole_proprietorship", "patnership"]),
+        industryClassification: faker.helpers.arrayElement(["ict", "agriculture", "medical", "finance"]),
+        url: faker.helpers.arrayElement(["www.duumyurl.com", "www.newurl.com"]),
+        countryOfIncorporation: faker.address.country()
       },
     ],
-    FirstName: faker.name.firstName(),
-    LastName: faker.name.lastName(),
-    Status: faker.helpers.arrayElement(["active", "terminated"]),
-    Gender: faker.name.sexType(),
-    Phones: [
+    firstName: faker.name.firstName(),
+    lastName: faker.name.lastName(),
+    status: faker.helpers.arrayElement(["active", "terminated"]),
+    gender: faker.name.sexType(),
+    phones: [
       {
-        NumberType: faker.helpers.arrayElement(["home", "office"]),
-        Number: faker.phone.number(),
+        numberType: faker.helpers.arrayElement(["home", "office"]),
+        number: faker.phone.number(),
       },
     ],
-    Emails: [
+    emails: [
       {
-        EmailType: faker.helpers.arrayElement(["home", "office"]),
-        Address: faker.internet.email(),
+        emailType: faker.helpers.arrayElement(["home", "office"]),
+        address: faker.internet.email(),
       },
     ],
-    Address: [
+    addresses: [
       {
-        AddressType: faker.helpers.arrayElement(["home", "office"]),
-        Line1: `${faker.address.buildingNumber()} ${faker.address.street()}`,
-        Line2: faker.address.secondaryAddress(),
-        PostCode: faker.address.zipCode(),
-        City: faker.address.city(),
-        State: faker.address.state(),
-        Country: faker.address.country(),
+        addressType: faker.helpers.arrayElement(["home", "office"]),
+        line1: `${faker.address.buildingNumber()} ${faker.address.street()}`,
+        line2: faker.address.secondaryAddress(),
+        postCode: faker.address.zipCode(),
+        city: faker.address.city(),
+        state: faker.address.state(),
+        country: faker.address.country(),
       },
     ],
-    GovernmentId: [
+    governmentIds: [
       {
-        IdType: faker.helpers.arrayElement(["drivers_license", "bvn", "nin"]),
-        GovernmentId: faker.database.mongodbObjectId(),
-        IssuingAuthority: faker.company.name(),
-        ExpirationDate: faker.datatype.datetime(),
+        idType: faker.helpers.arrayElement(["drivers_license", "bvn", "nin"]),
+        governmentId: faker.database.mongodbObjectId(),
+        issuingAuthority: faker.company.name(),
+        expirationDate: faker.datatype.datetime(),
       },
     ],
-    Domicile: faker.address.countryCode(),
-    CreatedAt: faker.datatype.datetime(),
+    domicile: faker.address.countryCode(),
+    createdAt: faker.datatype.datetime(),
   };
 
   return actor;
@@ -59,17 +59,17 @@ const createFakeActor = () => {
 
 const createFakeTransaction = () => {
   const transaction = {
-    Id: faker.database.mongodbObjectId(),
-    Channel: faker.helpers.arrayElement(["branch", "online", "atm", "pos", "mobile", "unknown"]),
-    AccountNumber: "2969798617",
-    EntryDate: faker.date.between('2022-01-01T00:00:00.000Z', '2022-12-31T00:00:00.000Z'),
-    Amount: faker.commerce.price(),
-    LocalAmount: faker.commerce.price(),
-    CardNumber: faker.finance.creditCardNumber(),
-    Balance: faker.commerce.price(),
-    ChannelLocation: faker.address.city(),
-    Category: faker.helpers.arrayElement(["deposit", "withdrawal", "transfer", "webPurchase"]),
-    TransactionMethod: faker.helpers.arrayElement([
+    id: faker.database.mongodbObjectId(),
+    channel: faker.helpers.arrayElement(["branch", "online", "atm", "pos", "mobile", "unknown"]),
+    accountNumber: "2969798617",
+    entryDate: faker.date.between('2022-01-01T00:00:00.000Z', '2022-12-31T00:00:00.000Z'),
+    amount: faker.commerce.price(),
+    localAmount: faker.commerce.price(),
+    cardNumber: faker.finance.creditCardNumber(),
+    balance: faker.commerce.price(),
+    channelLocation: faker.address.city(),
+    category: faker.helpers.arrayElement(["deposit", "withdrawal", "transfer", "webPurchase"]),
+    transactionMethod: faker.helpers.arrayElement([
       "fee",
       "interest",
       "cash",
@@ -79,12 +79,12 @@ const createFakeTransaction = () => {
       "transfer",
       "reversal",
     ]),
-    Currency: faker.finance.currencyCode(),
-    CheckNumber: faker.finance.creditCardNumber(),
-    ChannelIpAddress: faker.internet.ipv4(),
-    InternationalTransaction: faker.helpers.arrayElement([true, false]),
-    Description: faker.lorem.lines(),
-    Status: faker.helpers.arrayElement([
+    currency: faker.finance.currencyCode(),
+    checkNumber: faker.finance.creditCardNumber(),
+    channelIpAddress: faker.internet.ipv4(),
+    internationalTransaction: faker.helpers.arrayElement([true, false]),
+    description: faker.lorem.lines(),
+    status: faker.helpers.arrayElement([
       "completed",
       "pending",
       "accepted",
@@ -93,80 +93,72 @@ const createFakeTransaction = () => {
       "acknowledged",
       "paused",
     ]),
-    MerchantCategoryCode: faker.datatype.number(10000),
-    MerchantCountryCode: faker.address.countryCode(),
-    Beneficiary:
+    merchantCategoryCode: faker.datatype.number(10000),
+    merchantCountryCode: faker.address.countryCode(),
+    beneficiary:
       {
-        Id: faker.database.mongodbObjectId(),
-        Type: faker.helpers.arrayElement(["individual", "legal_entity"]),
-        Name: faker.name.fullName(),
-        AccountNumber: faker.finance.account(10),
-        Address: `${faker.address.buildingNumber()} ${faker.address.street()},${faker.address.city()}, ${faker.address.state()}, ${faker.address.country()}`,
-        BankName: faker.helpers.arrayElement(["First", "GTB", "Fidelity", "UBA"]),
-        Bic: faker.datatype.number(100000000000),
-        Iban: faker.datatype.number(100000000000000),
-        MerchantCategoryCode: faker.datatype.number(10000),
-        MerchantCountryCode: faker.address.countryCode(),
+        id: faker.database.mongodbObjectId(),
+        type: faker.helpers.arrayElement(["individual", "legal_entity"]),
+        name: faker.name.fullName(),
+        accountNumber: faker.finance.account(10),
+        address: `${faker.address.buildingNumber()} ${faker.address.street()},${faker.address.city()}, ${faker.address.state()}, ${faker.address.country()}`,
+        bankName: faker.helpers.arrayElement(["First", "GTB", "Fidelity", "UBA"]),
+        bic: faker.datatype.number(100000000000),
+        iban: faker.datatype.number(100000000000000),
+        merchantCategoryCode: faker.datatype.number(10000),
+        merchantCountryCode: faker.address.countryCode(),
       },
-      "Actor": {
-        "Id": "a2a23b5dde3467eeab1ebcea",
-        "ActorType": "legal_entity",
-        "AccountNumber": "2969798617",
-        "LegalEntity": [
+      "actor": {
+        "id": "dc999f40553afc2a332ecfbf",
+        "actorType": "individual",
+        "accountNumber": "0765641730",
+        "legalEntity": [
           {
-            "DateOfRegisteration": "2013-04-14T01:24:17.320Z",
-            "Type": "patnership",
-            "IndustryClassification": "agriculture",
-            "Url": "www.duumyurl.com",
-            "CountryOfIncorporation": "Poland"
+            "dateOfRegisteration": "2040-08-11T12:18:58.115Z",
+            "type": "sole_proprietorship",
+            "industryClassification": "agriculture",
+            "url": "www.newurl.com",
+            "countryOfIncorporation": "Bhutan"
           }
         ],
-        "FirstName": "Ocie",
-        "LastName": "Barrows",
-        "Status": "active",
-        "Phones": [
+        "firstName": "Adrien",
+        "lastName": "Hahn",
+        "status": "active",
+        "gender": "male",
+        "phones": [
           {
-            "NumberType": "office",
-            "Number": "1-992-793-3997 x306"
+            "numberType": "office",
+            "number": "(533) 481-9212 x1980"
           }
         ],
-        "Emails": [
+        "emails": [
           {
-            "EmailType": "office",
-            "Address": "ociebarrowsinc@hotmail.com"
+            "emailType": "office",
+            "address": "Leonel24@hotmail.com"
           }
         ],
-        "Address": [
+        "addresses": [
           {
-            "AddressType": "office",
-            "Line1": "96566 Gleichner Course",
-            "Line2": "Suite 377",
-            "PostCode": "03620",
-            "City": "North Destiniton",
-            "State": "Georgia",
-            "Country": "Israel"
+            "addressType": "home",
+            "line1": "4314 Erika Path",
+            "line2": "Suite 518",
+            "postCode": "37202-3555",
+            "city": "Fort Lauderdale",
+            "state": "New Jersey",
+            "country": "Algeria"
           }
         ],
-        "GovernmentId": [
+        "governmentIds": [
           {
-            "IdType": "cac",
-            "GovernmentId": "2539ec6a0d5d8703d997a7ca",
-            "IssuingAuthority": "cac",
-            "ExpirationDate": "2017-09-15T11:06:19.110Z"
+            "idType": "nin",
+            "governmentId": "f82df1ced894c7dced1f2b0f",
+            "issuingAuthority": "Kshlerin - Kertzmann",
+            "expirationDate": "2083-08-10T11:40:27.829Z"
           }
         ],
-        "Domicile": "NA",
-        "CreatedAt": "2087-02-05T21:54:34.195Z"
-      },
-      "ActorPepMatch": true,
-      "ActorCrimeListMatch": false,
-      "ActorWatchListMatch": false,
-      "ActorSanctionListMatch": false,
-      "BeneficiaryPepMatch": true,
-      "BeneficiaryCrimeListMatch": true,
-      "BeneficiaryWatchListMatch": true,
-      "BeneficiarySanctionListMatch": true,
-      "CreatedAt": "2003-10-20T04:25:13.946Z"
+        "domicile": "CO",
+        "createdAt": "2026-01-21T08:02:34.342Z"
+      }
   };
 
   return transaction;

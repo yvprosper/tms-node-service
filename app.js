@@ -35,13 +35,13 @@ app.post('/v1/tms/actors/generate', (req, res) => {
             actors.push(actor);
           }
           actors.map((actor) => {
-            if (actor.ActorType === "individual") {
+            if (actor.actorType === "individual") {
               // eslint-disable-next-line no-param-reassign
-              delete actor.LegalEntity;
+              delete actor.legalEntity;
             }
-            if (actor.ActorType === "legal_entity") {
+            if (actor.actorType === "legal_entity") {
               // eslint-disable-next-line no-param-reassign
-              delete actor.Gender;
+              delete actor.gender;
             }
             return actor;
           });
@@ -87,16 +87,16 @@ app.post('/v1/tms/transactions/generate', (req, res) => {
         }
 
         transactions.map((transaction) => {
-          if (transaction.TransactionMethod !== "check") {
-            delete transaction.CheckNumber;
+          if (transaction.transactionMethod !== "check") {
+            delete transaction.checkNumber;
           }
-          if (transaction.Actor.ActorType === "individual") {
+          if (transaction.actor.actorType === "individual") {
             // eslint-disable-next-line no-param-reassign
-            delete transaction.Actor.LegalEntity;
+            delete transaction.actor.legalEntity;
           }
-          if (transaction.Actor.ActorType === "legal_entity") {
+          if (transaction.actor.actorType === "legal_entity") {
             // eslint-disable-next-line no-param-reassign
-            delete transaction.Actor.Gender;
+            delete transaction.actor.gender;
           }
           return transaction;
         });
@@ -203,7 +203,7 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
         message: error.details[0].message
     })
     try {
-        const accountNumber = payload.transaction.AccountNumber;
+        const accountNumber = payload.transaction.accountNumber;
         const actors = fs.readFileSync("data/actors.json", "utf-8");
         const doc = JSON.parse(actors);
         const Actors = Array.from(doc);
@@ -219,18 +219,18 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
         Actors.map((actor) => {
           if (actor.accountNumber === accountNumber) {
             newTransaction = {
-              Id: faker.database.mongodbObjectId(),
-              ...payload,
-              Actor: actor,
-              ActorPepMatch: faker.helpers.arrayElement([true, false]),
-              ActorCrimeListMatch: faker.helpers.arrayElement([true, false]),
-              ActorWatchListMatch: faker.helpers.arrayElement([true, false]),
-              ActorSanctionListMatch: faker.helpers.arrayElement([true, false]),
-              BeneficiaryPepMatch: faker.helpers.arrayElement([true, false]),
-              BeneficiaryCrimeListMatch: faker.helpers.arrayElement([true, false]),
-              BeneficiaryWatchListMatch: faker.helpers.arrayElement([true, false]),
-              BeneficiarySanctionListMatch: faker.helpers.arrayElement([true, false]),
-              CreatedAt: faker.datatype.datetime(),
+              id: faker.database.mongodbObjectId(),
+              ...payload.transaction,
+              actor: actor,
+              actorPepMatch: faker.helpers.arrayElement([true, false]),
+              actorCrimeListMatch: faker.helpers.arrayElement([true, false]),
+              actorWatchListMatch: faker.helpers.arrayElement([true, false]),
+              actorSanctionListMatch: faker.helpers.arrayElement([true, false]),
+              beneficiaryPepMatch: faker.helpers.arrayElement([true, false]),
+              beneficiaryCrimeListMatch: faker.helpers.arrayElement([true, false]),
+              beneficiaryWatchListMatch: faker.helpers.arrayElement([true, false]),
+              beneficiarySanctionListMatch: faker.helpers.arrayElement([true, false]),
+              createdAt: faker.datatype.datetime(),
               
             };
           }
@@ -238,17 +238,17 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
         });
         if (newTransaction === undefined) {
             const data = {
-              Id: faker.database.mongodbObjectId(),
+              id: faker.database.mongodbObjectId(),
                 ...payload,
-              ActorPepMatch: faker.helpers.arrayElement([true, false]),
-              ActorCrimeListMatch: faker.helpers.arrayElement([true, false]),
-              ActorWatchListMatch: faker.helpers.arrayElement([true, false]),
-              ActorSanctionListMatch: faker.helpers.arrayElement([true, false]),
-              BeneficiaryPepMatch: faker.helpers.arrayElement([true, false]),
-              BeneficiaryCrimeListMatch: faker.helpers.arrayElement([true, false]),
-              BeneficiaryWatchListMatch: faker.helpers.arrayElement([true, false]),
-              BeneficiarySanctionListMatch: faker.helpers.arrayElement([true, false]),
-              CreatedAt: faker.datatype.datetime(),
+              actorPepMatch: faker.helpers.arrayElement([true, false]),
+              actorCrimeListMatch: faker.helpers.arrayElement([true, false]),
+              actorWatchListMatch: faker.helpers.arrayElement([true, false]),
+              actorSanctionListMatch: faker.helpers.arrayElement([true, false]),
+              beneficiaryPepMatch: faker.helpers.arrayElement([true, false]),
+              beneficiaryCrimeListMatch: faker.helpers.arrayElement([true, false]),
+              beneficiaryWatchListMatch: faker.helpers.arrayElement([true, false]),
+              beneficiarySanctionListMatch: faker.helpers.arrayElement([true, false]),
+              createdAt: faker.datatype.datetime(),
               }
           Transaction.push(data);
           const msg = {
@@ -259,6 +259,7 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
         await produceMessage("enriched_transaction_request",JSON.stringify(msg)) 
         } else {
           Transaction.push(newTransaction); 
+          console.log(newTransaction)
           const msg = {
             workflow: payload.workFlow,
             version: payload.version,
