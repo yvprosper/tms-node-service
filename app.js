@@ -239,7 +239,7 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
         if (newTransaction === undefined) {
             const data = {
               id: faker.database.mongodbObjectId(),
-                ...payload,
+                ...payload.transaction,
               actorPepMatch: faker.helpers.arrayElement([true, false]),
               actorCrimeListMatch: faker.helpers.arrayElement([true, false]),
               actorWatchListMatch: faker.helpers.arrayElement([true, false]),
