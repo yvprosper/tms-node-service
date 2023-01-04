@@ -197,11 +197,11 @@ app.post('/v1/tms/rule/new', async (req, res) => {
 
 app.post('/v1/tms/transaction/new', async (req, res) => {
     const payload = req.body
-    // const {error} = await createTransactionSchema(payload)
-    // if (error) return res.status(400).json({
-    //     success: false,
-    //     message: error.details[0].message
-    // })
+    const {error} = await createTransactionSchema(payload)
+    if (error) return res.status(400).json({
+        success: false,
+        message: error.details[0].message
+    })
     try {
         const accountNumber = payload.transaction.AccountNumber;
         const actors = fs.readFileSync("data/actors.json", "utf-8");
@@ -256,7 +256,7 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
           version: payload.version,
           data
           }
-         await produceMessage("enriched_transaction_request",JSON.stringify(msg)) 
+        await produceMessage("enriched_transaction_request",JSON.stringify(msg)) 
         } else {
           Transaction.push(newTransaction); 
           const msg = {
@@ -277,7 +277,7 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
         });
         res.status(201).json({
             success: true,
-            msg: "sucessfully created rule",
+            msg: "sucessfully added transaction for evaluation",
             data: JSON.parse(data),
           });
       } catch (error) {
@@ -291,7 +291,7 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
 })
 
 app.listen(port, async () => {
-  await consumeMessage("rule-topic")
+    await consumeMessage("rule-topic")
     console.log(`server is up and running on port ${port}`)
 
 })
