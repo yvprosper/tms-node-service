@@ -136,11 +136,11 @@ app.post('/v1/tms/transactions/generate', (req, res) => {
 
 app.post('/v1/tms/rule/new', async (req, res) => {
     const payload = req.body
-    const {error} = await createRuleSchema(payload)
-    if (error) return res.status(400).json({
-        success: false,
-        message: error.details[0].message
-    })
+    // const {error} = await createRuleSchema(payload)
+    // if (error) return res.status(400).json({
+    //     success: false,
+    //     message: error.details[0].message
+    // })
     try {
       const newRule = []
       payload.rules.map((rule)=> {
@@ -178,7 +178,7 @@ app.post('/v1/tms/rule/new', async (req, res) => {
             data: dataObj
           }
 
-         await produceMessage("rule-topic", JSON.stringify(msg))
+       //  await produceMessage("rule-topic", JSON.stringify(msg))
     
         res.status(201).json({
             success: true,
@@ -292,7 +292,7 @@ app.post('/v1/tms/transaction/new', async (req, res) => {
 })
 
 app.listen(port, async () => {
-    await consumeMessage("rule-topic")
+    //await consumeMessage("rule-topic")
     console.log(`server is up and running on port ${port}`)
 
 })

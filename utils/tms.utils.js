@@ -9,8 +9,10 @@ const arrangeRuleObject = (data) => {
         if (group.sentences[i].action === null || group.sentences[i].action === undefined) {
           firstObject = { obj: `${data.header}.${group.sentences[i].inputField}`}
         } else {
-          firstObject = { call: ["CF.Aggregation", {
-            const: `{'action': ${group.sentences[i].action} , 'filter_fields': ${JSON.stringify(group.sentences[i].filterFields).replace(/\"/g, "'")}, 'action_field': ${group.sentences[i].actionField}, 'date_range': ${group.sentences[i].dateRange}})`
+          firstObject = group.sentences[i].filterFields ?  { call: ["CF.Aggregation", {
+            const: `{'action': ${group.sentences[i].action} , 'filter_fields': ${JSON.stringify(group.sentences[i].filterFields).replace(/\"/g, "'")}, 'action_field': ${group.sentences[i].actionField}, 'date_range': ${`[${group.sentences[i].dateRange}]`}})`
+          }]} : { call: ["CF.Aggregation", {
+            const: `{'action': ${group.sentences[i].action} , 'action_field': ${group.sentences[i].actionField}, 'date_range': ${`[${group.sentences[i].dateRange}]`}})`
           }]}
         }
         if (group.sentences[i].type === "static"){
